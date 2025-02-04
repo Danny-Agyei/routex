@@ -1,0 +1,32 @@
+@use "../abstracts/function" as convert;
+@use "../base/color" as *;
+
+.u-headline-main {
+  font-size: convert.toRem(30);
+  font-size: clamp(convert.toRem(30), 1.25rem + 3.125vw, convert.toRem(80));
+  line-height: 1.125;
+  color: $color-primary-900;
+}
+
+.u-headline-secondary {
+  font-size: convert.toRem(24);
+  font-size: clamp(
+    convert.toRem(24),
+    1.8055825242718447rem + 1.6828478964401297vw,
+    convert.toRem(50)
+  );
+  margin-block: 2rem;
+  line-height: 1.2;
+  color: $color-primary-900;
+}
+
+.u-sub-headline {
+  font-size: convert.toRem(18);
+  font-size: clamp(
+    convert.toRem(18),
+    1.0339805825242718rem + 1.3883495145631068vw,
+    convert.toRem(22)
+  );
+  line-height: 1.2;
+  color: $color-primary-900;
+}

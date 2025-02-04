@@ -1,0 +1,10 @@
+@use "../abstracts/mixin" as *;
+@use "../base/color" as *;
+@use "../base/button" as *;
+@use "../base/typography" as *;
+
+body {
+  max-width: 110rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}

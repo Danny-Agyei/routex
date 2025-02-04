@@ -1,0 +1,12 @@
+{
+  "name": "routex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass scss/style.scss dist/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

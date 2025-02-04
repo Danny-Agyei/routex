@@ -1,0 +1,176 @@
+/* plus-jakarta-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/plus-jakarta-sans-v8-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/plus-jakarta-sans-v8-latin-500.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../assets/fonts/plus-jakarta-sans-v8-latin-600.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* plus-jakarta-sans-800 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Plus Jakarta Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../assets/fonts/plus-jakarta-sans-v8-latin-800.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+html {
+  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  font-size: 0.625rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(84, 33%, 94%);
+  color: hsl(0, 0%, 45%);
+  font-size: 1.6rem;
+  line-height: 1.875;
+  min-height: 100vh;
+}
+
+a,
+a:active,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+svg {
+  width: inherit;
+  height: inherit;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-size: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.btn {
+  align-items: center;
+  border-radius: 99.9rem;
+  display: inline-flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  justify-content: center;
+  padding: 2rem 3rem;
+  text-align: center;
+  gap: 1rem;
+}
+.btn svg {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.btn--icon {
+  gap: 0;
+  height: 6rem;
+  width: 6rem;
+  padding: 0;
+}
+.btn--primary {
+  background-color: hsl(86, 73%, 46%);
+  color: hsl(0, 0%, 100%);
+}
+.btn--primary svg {
+  fill: hsl(0, 0%, 100%);
+}
+.btn--outline-dark {
+  background-color: transparent;
+  border-color: hsl(162, 92%, 15%);
+}
+.btn--outline-dark svg {
+  fill: hsl(162, 92%, 15%);
+}
+.btn--outline-light {
+  background-color: transparent;
+  border-color: hsl(0, 0%, 100%);
+}
+.btn--outline-light svg {
+  fill: hsl(0, 0%, 100%);
+}
+
+.u-headline-main {
+  font-size: 3rem;
+  font-size: clamp(3rem, 1.25rem + 3.125vw, 8rem);
+  line-height: 1.125;
+  color: hsl(162, 92%, 15%);
+}
+
+.u-headline-secondary {
+  font-size: 2.4rem;
+  font-size: clamp(2.4rem, 1.8055825243rem + 1.6828478964vw, 5rem);
+  margin-block: 2rem;
+  line-height: 1.2;
+  color: hsl(162, 92%, 15%);
+}
+
+.u-sub-headline {
+  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 1.0339805825rem + 1.3883495146vw, 2.2rem);
+  line-height: 1.2;
+  color: hsl(162, 92%, 15%);
+}
+
+body {
+  max-width: 110rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

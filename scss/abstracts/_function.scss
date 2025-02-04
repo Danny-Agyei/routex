@@ -1,0 +1,21 @@
+@use "sass:math";
+
+@function toRem($pixels) {
+  @if (math.is-unitless($pixels)) {
+    @return math.div($pixels, 10) * 1rem;
+  } @else {
+    @return "Error: Don\t pass the unit (px) along  using this function";
+  }
+}
+
+@function toEm($pixels) {
+  @if (math.is-unitless($pixels)) {
+    @return math.div($pixels, 10) * 1em;
+  } @else {
+    @return "Error: Don\t pass the unit (px) along when using this function";
+  }
+}
+
+@function toClamp($min, $preferred, $max) {
+  @return clamp(min, $preferred, $max);
+}

@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "./function" as convert;
+
+$breakpoints: (
+  "mobile": 575,
+  "tablet": 768,
+  "tablet-landscape": 992,
+  "desktop": 1175,
+);
+
+@mixin breakpoint($device) {
+  $min-width: map.get($breakpoints, $device);
+
+  @media screen and (min-width: convert.toEm($min-width)) {
+    @content;
+  }
+}

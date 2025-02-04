@@ -1,0 +1,6 @@
+@use "../abstracts/function" as convert;
+
+// @radius
+$radius-sm: convert.toRem(20);
+$radius-lg: convert.toRem(50);
+$radius-full: convert.toRem(999);
