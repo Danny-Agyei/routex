@@ -7,17 +7,17 @@
   display: inline-flex;
   font-size: 1.4rem;
   font-weight: 600;
+  gap: 1rem;
   justify-content: center;
   padding: 2rem 3rem;
   text-align: center;
-  gap: 1rem;
+  transition: all 0.25s ease-in-out;
 
-  svg {
-    height: 1.6rem;
-    width: 1.6rem;
+  &__arrow {
+    font-size: 1.6rem;
   }
 
-  &--icon {
+  &-icon-only {
     gap: 0;
     height: 6rem;
     width: 6rem;
@@ -28,26 +28,29 @@
     background-color: $color-primary-500;
     color: $color-neutral-100;
 
-    svg {
-      fill: $color-neutral-100;
+    &:hover {
+      background-color: $color-primary-900;
     }
   }
 
-  &--outline-dark {
+  &--outline-success {
     background-color: transparent;
-    border-color: $color-primary-900;
+    border-color: $color-primary-500;
+    color: $color-primary-900;
 
-    svg {
-      fill: $color-primary-900;
+    &:hover {
+      background-color: $color-primary-900;
+      color: $color-neutral-100;
     }
   }
 
   &--outline-light {
-    background-color: transparent;
     border-color: $color-neutral-100;
+    color: $color-neutral-100;
 
-    svg {
-      fill: $color-neutral-100;
+    &:hover {
+      background-color: $color-primary-900;
+      color: $color-neutral-100;
     }
   }
 }

@@ -1,11 +1,12 @@
 @use "sass:map";
 @use "./function" as convert;
 
+// @media breakpoints
 $breakpoints: (
-  "mobile": 575,
   "tablet": 768,
   "tablet-landscape": 992,
   "desktop": 1175,
+  "large": 1440,
 );
 
 @mixin breakpoint($device) {
@@ -15,3 +16,20 @@ $breakpoints: (
     @content;
   }
 }
+
+// Button variants
+$variants: (
+  "primary": (
+    "bgColor": "primary-500",
+    "color": "neutral-100",
+    "hoverBg": "primary-900",
+    "hoverColor": "$color-neutral-100",
+  ),
+
+  "icon--success": (
+    "bgColor": "primary-500",
+    "color": "neutral-100",
+    "hoverBg": "primary-500",
+    "hoverColor": "$color-neutral-100",
+  ),
+);

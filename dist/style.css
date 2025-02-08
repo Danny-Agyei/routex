@@ -74,11 +74,6 @@ img {
   max-width: 100%;
 }
 
-svg {
-  width: inherit;
-  height: inherit;
-}
-
 input {
   background-color: transparent;
   border: none;
@@ -100,6 +95,38 @@ h4,
 h5 {
   font-size: inherit;
   font-weight: 700;
+  line-height: 1.2;
+  color: hsl(162, 92%, 15%);
+}
+
+.l-grid, .l-grid-main {
+  display: grid;
+}
+
+.l-grid-main {
+  grid-template-columns: 1fr repeat(3, calc((min(100% - 4rem, 54rem) - 4rem) / 3)) 1fr;
+  gap: 2rem;
+}
+@media screen and (min-width: 48em) {
+  .l-grid-main {
+    grid-template-columns: 1fr repeat(6, calc((min(100% - 8rem, 43.75em) - 16rem) / 6)) 1fr;
+    gap: 3.2rem;
+  }
+}
+@media screen and (min-width: 62em) {
+  .l-grid-main {
+    grid-template-columns: 1fr repeat(12, calc((min(100% - 8rem, 58.75em) - 35.2rem) / 12)) 1fr;
+  }
+}
+@media screen and (min-width: 73.4375em) {
+  .l-grid-main {
+    grid-template-columns: 1fr repeat(12, calc((min(100% - 8rem, 71.25em) - 35.2rem) / 12)) 1fr;
+  }
+}
+@media screen and (min-width: 90em) {
+  .l-grid-main {
+    grid-template-columns: 1fr repeat(12, calc((min(100% - 8rem, 80em) - 35.2rem) / 12)) 1fr;
+  }
 }
 
 .btn {
@@ -108,16 +135,16 @@ h5 {
   display: inline-flex;
   font-size: 1.4rem;
   font-weight: 600;
+  gap: 1rem;
   justify-content: center;
   padding: 2rem 3rem;
   text-align: center;
-  gap: 1rem;
+  transition: all 0.25s ease-in-out;
 }
-.btn svg {
-  height: 1.6rem;
-  width: 1.6rem;
+.btn__arrow {
+  font-size: 1.6rem;
 }
-.btn--icon {
+.btn-icon-only {
   gap: 0;
   height: 6rem;
   width: 6rem;
@@ -127,50 +154,57 @@ h5 {
   background-color: hsl(86, 73%, 46%);
   color: hsl(0, 0%, 100%);
 }
-.btn--primary svg {
-  fill: hsl(0, 0%, 100%);
+.btn--primary:hover {
+  background-color: hsl(162, 92%, 15%);
 }
-.btn--outline-dark {
+.btn--outline-success {
   background-color: transparent;
-  border-color: hsl(162, 92%, 15%);
+  border-color: hsl(86, 73%, 46%);
+  color: hsl(162, 92%, 15%);
 }
-.btn--outline-dark svg {
-  fill: hsl(162, 92%, 15%);
+.btn--outline-success:hover {
+  background-color: hsl(162, 92%, 15%);
+  color: hsl(0, 0%, 100%);
 }
 .btn--outline-light {
-  background-color: transparent;
   border-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%);
 }
-.btn--outline-light svg {
-  fill: hsl(0, 0%, 100%);
+.btn--outline-light:hover {
+  background-color: hsl(162, 92%, 15%);
+  color: hsl(0, 0%, 100%);
 }
 
-.u-headline-main {
-  font-size: 3rem;
-  font-size: clamp(3rem, 1.25rem + 3.125vw, 8rem);
-  line-height: 1.125;
-  color: hsl(162, 92%, 15%);
+.u-headline-primary {
+  font-size: 2.8rem;
+  font-size: clamp(2.8rem, 1.65rem + 3.525vw, 8rem);
 }
 
 .u-headline-secondary {
   font-size: 2.4rem;
-  font-size: clamp(2.4rem, 1.8055825243rem + 1.6828478964vw, 5rem);
-  margin-block: 2rem;
-  line-height: 1.2;
-  color: hsl(162, 92%, 15%);
+  font-size: clamp(2rem, 1.6055825243rem + 1.6828478964vw, 5rem);
 }
 
 .u-sub-headline {
   font-size: 1.8rem;
   font-size: clamp(1.8rem, 1.0339805825rem + 1.3883495146vw, 2.2rem);
-  line-height: 1.2;
+}
+
+.u-section-label {
   color: hsl(162, 92%, 15%);
 }
 
 body {
-  max-width: 110rem;
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-block: 2rem;
+}
+
+h1,
+h2,
+h3,
+p,
+button {
+  grid-column: 2/-2;
 }
 
 /*# sourceMappingURL=style.css.map */

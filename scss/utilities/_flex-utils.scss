@@ -1,0 +1,53 @@
+@use "../abstracts/mixin" as *;
+
+.u-flex-col {
+  flex-direction: column;
+}
+
+.u-flex-ac {
+  align-items: center;
+}
+
+.u-flex-jb {
+  justify-content: space-between;
+}
+
+.u-flex-jb-center {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.u-flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@include breakpoint("tablet") {
+  .u-flex-md-col {
+    flex-direction: column;
+  }
+
+  .u-flex-md-row {
+    flex-direction: row;
+  }
+}
+
+@include breakpoint("table-landscape") {
+  .u-flex-lg-col {
+    flex-direction: column;
+  }
+
+  .u-flex-lg-row {
+    flex-direction: row;
+  }
+}
+
+@include breakpoint("desktop") {
+  .u-flex-xlg-col {
+    flex-direction: column;
+  }
+
+  .u-flex-xlg-row {
+    flex-direction: row;
+  }
+}

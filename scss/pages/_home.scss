@@ -4,7 +4,14 @@
 @use "../base/typography" as *;
 
 body {
-  max-width: 110rem;
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-block: 2rem;
+}
+
+h1,
+h2,
+h3,
+p,
+button {
+  grid-column: 2 / -2;
 }

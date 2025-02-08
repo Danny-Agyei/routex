@@ -1,4 +1,5 @@
-@use "./base/global" as *;
+@use "./base/reset" as *;
+@use "./layout/grid" as *;
 @use "./layout/header" as *;
 @use "./pages/home" as *;
 @use "./layout/footer" as *;

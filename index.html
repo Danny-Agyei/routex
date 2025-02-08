@@ -1,89 +1,993 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary Meta Tags -->
     <title>RouteX - Visa Made Easy Dreams Made Possible</title>
+    <meta name="keywords" content="Visa, Immigration, Travel, Tour" />
     <meta name="title" content="Visa Made Easy Dreams Made Possible" />
-    <meta name="description"
-        content="We make memories around the world unforgettable. We provide business, student, tourist and working visa without any hassle." />
+    <meta
+      name="description"
+      content="We make memories around the world unforgettable. We provide business, student, tourist and working visa without any hassle."
+    />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://routex.io/" />
     <meta property="og:title" content="Visa Made Easy Dreams Made Possible" />
-    <meta property="og:description"
-        content="We make memories around the world unforgettable. We provide business, student, tourist and working visa without any hassle." />
+    <meta
+      property="og:description"
+      content="We make memories around the world unforgettable. We provide business, student, tourist and working visa without any hassle."
+    />
     <meta property="og:image" content="./assets/images/footer-logo.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://routex.io/" />
-    <meta property="twitter:title" content="Visa Made Easy Dreams Made Possible" />
-    <meta property="twitter:description"
-        content="We make memories around the world unforgettable. We provide business, student, tourist and working visa without any hassle." />
+    <meta
+      property="twitter:title"
+      content="Visa Made Easy Dreams Made Possible"
+    />
+    <meta
+      property="twitter:description"
+      content="We make memories around the world unforgettable. We provide business, student, tourist and working visa without any hassle."
+    />
     <meta property="twitter:image" content="./assets/images/footer-logo.png" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/images/favicon-16x16.png"
+    />
     <link rel="manifest" href="./site.webmanifest" />
 
     <link rel="stylesheet" href="./dist/style.css" />
-</head>
-<header class="header"></header>
+  </head>
 
-<main></main>
+  <body>
+    <header class="header l-grid-main">
+      <a href="/home">
+        <img
+          src="./assets/images/logo.png"
+          alt="Routex Home"
+          class="header__logo"
+          width="157"
+          height="40"
+        />
+      </a>
 
-<footer class="footer"></footer>
+      <nav id="nav-main" class="nav" aria-label="Main">
+        <div class="nav__wrapper">
+          <ul class="nav__list">
+            <li>
+              <a href="/home" class="nav__link" aria-current="page">Home</a>
+            </li>
+            <li><a href="/about" class="nav__link">About us</a></li>
+            <li><a href="/service" class="nav__link">Services</a></li>
+            <li><a href="/pricing" class="nav__link">Pricing</a></li>
+            <li><a href="/blog" class="nav__link">Blog</a></li>
+            <li><a href="/contact" class="nav__link">Contact</a></li>
+          </ul>
 
-<h1 class="u-headline-main">Visa Made Easy Dreams Made Possible</h1>
-<h2 class="u-headline-secondary">Where Wanderlust Meets Dream Destinations </h2>
-<h3 class="u-sub-headline">Business Visa</h3>
-<p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sequi in
-    corrupti illo, aspernatur dignissimos veniam dolore repellendus!
-    Voluptatum, enim beatae voluptates iure vero eaque corrupti ipsum harum
-    quas laboriosam!
-</p>
+          <!-- Close Button -->
+          <button
+            class="nav__toggle"
+            aria-label="Close Main Navigation"
+            aria-controls="nav-main"
+            aria-expanded="true"
+          >
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+            >
+              <path
+                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
+              />
+            </svg>
+          </button>
+        </div>
 
-<button class="btn btn--primary">
-    Get An Appointment
-    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10">
-        <path
-            d="M13.7256 5.41797L10.2256 8.91797C9.89746 9.27344 9.32324 9.27344 8.99512 8.91797C8.63965 8.58984 8.63965 8.01562 8.99512 7.6875L10.9912 5.66406H0.874023C0.381836 5.66406 -0.000976562 5.28125 -0.000976562 4.78906C-0.000976562 4.26953 0.381836 3.91406 0.874023 3.91406H10.9912L8.99512 1.91797C8.63965 1.58984 8.63965 1.01562 8.99512 0.6875C9.32324 0.332031 9.89746 0.332031 10.2256 0.6875L13.7256 4.1875C14.0811 4.51562 14.0811 5.08984 13.7256 5.41797Z" />
-    </svg>
-</button>
-<br />
-<br />
-<button class="btn btn--outline-dark">
-    Read more
-    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10">
-        <path
-            d="M13.7256 5.41797L10.2256 8.91797C9.89746 9.27344 9.32324 9.27344 8.99512 8.91797C8.63965 8.58984 8.63965 8.01562 8.99512 7.6875L10.9912 5.66406H0.874023C0.381836 5.66406 -0.000976562 5.28125 -0.000976562 4.78906C-0.000976562 4.26953 0.381836 3.91406 0.874023 3.91406H10.9912L8.99512 1.91797C8.63965 1.58984 8.63965 1.01562 8.99512 0.6875C9.32324 0.332031 9.89746 0.332031 10.2256 0.6875L13.7256 4.1875C14.0811 4.51562 14.0811 5.08984 13.7256 5.41797Z" />
-    </svg>
-</button>
-<br />
-<br />
-<button class="btn btn--icon btn--outline-light">
-    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10">
-        <path
-            d="M13.7256 5.41797L10.2256 8.91797C9.89746 9.27344 9.32324 9.27344 8.99512 8.91797C8.63965 8.58984 8.63965 8.01562 8.99512 7.6875L10.9912 5.66406H0.874023C0.381836 5.66406 -0.000976562 5.28125 -0.000976562 4.78906C-0.000976562 4.26953 0.381836 3.91406 0.874023 3.91406H10.9912L8.99512 1.91797C8.63965 1.58984 8.63965 1.01562 8.99512 0.6875C9.32324 0.332031 9.89746 0.332031 10.2256 0.6875L13.7256 4.1875C14.0811 4.51562 14.0811 5.08984 13.7256 5.41797Z" />
-    </svg>
-</button>
-<br />
-<br />
-<button class="btn btn--icon btn--primary">
-    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="10" viewBox="0 0 15 10">
-        <path
-            d="M13.7256 5.41797L10.2256 8.91797C9.89746 9.27344 9.32324 9.27344 8.99512 8.91797C8.63965 8.58984 8.63965 8.01562 8.99512 7.6875L10.9912 5.66406H0.874023C0.381836 5.66406 -0.000976562 5.28125 -0.000976562 4.78906C-0.000976562 4.26953 0.381836 3.91406 0.874023 3.91406H10.9912L8.99512 1.91797C8.63965 1.58984 8.63965 1.01562 8.99512 0.6875C9.32324 0.332031 9.89746 0.332031 10.2256 0.6875L13.7256 4.1875C14.0811 4.51562 14.0811 5.08984 13.7256 5.41797Z" />
-    </svg>
-</button>
+        <!-- Open Button -->
+        <button
+          class="nav__toggle"
+          aria-label="Open Main Navigation"
+          aria-controls="nav-main"
+          aria-expanded="false"
+        >
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+            />
+          </svg>
+        </button>
+      </nav>
 
-</body>
+      <button class="btn btn--primary header__btn">
+        Schedule Now
+        <i class="btn__arrow" aria-hidden="true">🡪</i>
+      </button>
+    </header>
 
+    <main>
+      <section class="hero">
+        <div class="hero__wrapper l-grid-main">
+          <div class="hero__content">
+            <h1 class="u-headline-primary">
+              Visa Immigration: Way for Your Brighter Future
+            </h1>
+            <div class="hero__cta-btns l-flex">
+              <button class="hero__btn btn btn--outline-light">
+                Read more
+                <i class="btn__arrow" aria-hidden="true">🡪</i>
+              </button>
+              <button
+                class="hero__btn hero__btn--play btn btn-icon-only btn--outline-success"
+                aria-label="Play Our Video"
+              >
+                <svg
+                  aria-hidden="true"
+                  width="21"
+                  height="23"
+                  viewBox="0 0 21 23"
+                  fill="white"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.285475 1.82497C0.285475 0.565117 1.64931 -0.222297 2.74038 0.407632L19.387 10.0186C20.4781 10.6485 20.4781 12.2233 19.387 12.8533L2.74038 22.4642C1.64931 23.0941 0.285475 22.3067 0.285475 21.0469L0.285475 1.82497Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="hero__banner">
+            <img
+              src="./assets/images/hero-image-4x.png"
+              alt="Man with pink luggage waving and smiling"
+              class="hero__img"
+              width="300"
+              height="300"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services l-grid-main">
+        <div class="l-wrapper">
+          <div class="services__header">
+            <p class="u-section__label l-flex u-flex-ac">
+              <img
+                src="./assets/images/ticket.svg"
+                alt=""
+                class="u-label-icon"
+              />
+              <span>Our services</span>
+            </p>
+            <h2 class="u-headline-secondary">
+              Adventure Unleashed Discover Your Next
+            </h2>
+          </div>
+          <ul class="l-grid">
+            <li class="service__item l-flex u-flex-col u-flex-center">
+              <img
+                src="./assets/images/tour.png"
+                alt=""
+                class="services__icon"
+                width="100"
+                height="100"
+              />
+              <h3 class="u-sub-headline">Food and Wine Tours</h3>
+            </li>
+            <li class="service__item l-flex u-flex-col u-flex-center">
+              <img
+                src="./assets/images/travel-opportunities.png"
+                alt=""
+                class="services__icon"
+                width="100"
+                height="100"
+              />
+              <h3 class="u-sub-headline">Food and Wine Tours</h3>
+            </li>
+            <li class="service__item l-flex u-flex-col u-flex-center">
+              <img
+                src="./assets/images/travel-planning.png"
+                alt=""
+                class="services__icon"
+                width="100"
+                height="100"
+              />
+              <h3 class="u-sub-headline">Food and Wine Tours</h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about l-grid-main">
+        <div class="l-wrapper">
+          <div class="about__content l-flex u-flex-col">
+            <div class="about__header">
+              <p class="u-section__label l-flex u-flex-ac">
+                <img
+                  src="./assets/images/ticket.svg"
+                  alt=""
+                  class="u-label-icon"
+                />
+                <span>About Us</span>
+              </p>
+              <h2 class="u-headline-secondary">
+                Where Wanderlust Meets Dream Destinations
+              </h2>
+            </div>
+
+            <p>
+              Et purus duis sollicitudin dignissim habitant. Egestas nulla quis
+              venenatis cras sed eu massa Et purus duis sollicitudin dignissim
+              habitant. Egestas nulla quis venenatis cras sed eu massa Et purus
+              duis sollicitudin dignissim habitant. Egestas nulla
+            </p>
+
+            <div class="about__recognitions">
+              <div class="about__card l-flex u-flex-col">
+                <div class="l-flex u flex-ac">
+                  <img
+                    src="./assets/images/passport-plus.png"
+                    alt=""
+                    class="about__icon"
+                  />
+                  <h3 class="u-sub-headline">Passport Plus</h3>
+                </div>
+                <div class="l-flex u flex-ac">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                  <p>Beyond Border Immigration</p>
+                </div>
+                <div class="l-flex u flex-ac">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                  <p>Worldwide Visa Assistance</p>
+                </div>
+              </div>
+
+              <div class="about__card l-flex u-flex-col">
+                <div class="l-flex u flex-ac">
+                  <img
+                    src="./assets/images/global-entry.png"
+                    alt=""
+                    class="about__icon"
+                  />
+                  <h3 class="u-sub-headline">Global Entry</h3>
+                </div>
+                <div class="l-flex u flex-ac">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                  <p>GlobeTrot Visa Services</p>
+                </div>
+                <div class="l-flex u flex-ac">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    width="16"
+                    height="16"
+                  />
+                  <p>Infinity Visa Solutions</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__contact l-flex u-flex-ac">
+              <button class="btn btn--outline-success">
+                Read more <i aria-hidden="true">🡪</i>
+              </button>
+              <div class="l-flex u-flex-ac about__phone">
+                <img
+                  src="./assets/images/phone.png"
+                  alt=""
+                  width="55"
+                  height="55"
+                />
+                <div>
+                  <p>Need help?</p>
+                  <a href="tel:(808)555-0111" class="about__number"
+                    >(808)555-0111</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__gallery l-grid">
+            <img
+              src="./assets/images/about-3x.jpg"
+              alt=""
+              class="about__img-one"
+            />
+
+            <div class="about__experience l-flex u-flex-center">
+              <h3 class="about__years">25</h3>
+              <p>Years of Experience</p>
+            </div>
+
+            <img
+              src="./assets/images/about-badge.png"
+              alt=""
+              class="about__img-two"
+            />
+
+            <img
+              src="./assets/images/about-4x.jpg"
+              alt=""
+              class="about__img-three"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="companies l-grid-main">
+        <div class="l-wrapper l-flex u-flex-col u-flex-md-row">
+          <img
+            src="./assets/images/segment.png"
+            alt="segment"
+            class="companies__img"
+            width="144"
+            height="48"
+          />
+          <img
+            src="./assets/images/splunk.png"
+            alt="Splunk"
+            class="companies__img"
+            width="144"
+            height="48"
+          />
+          <img
+            src="./assets/images/hubspot.png"
+            alt="Hubspot"
+            class="companies__img"
+            width="144"
+            height="48"
+          />
+          <img
+            src="./assets/images/asana.png"
+            alt="Asana"
+            class="companies__img"
+            width="144"
+            height="48"
+          />
+          <img
+            src="./assets/images/airtasker.png"
+            alt="Airtasker"
+            class="companies__img"
+            width="144"
+            height="48"
+          />
+        </div>
+      </section>
+
+      <section class="countries l-grid-main">
+        <div class="l-wrapper">
+          <div class="countries__header">
+            <div>
+              <p class="u-section__label l-flex u-flex-ac">
+                <img
+                  src="./assets/images/ticket.svg"
+                  alt=""
+                  class="u-label-icon"
+                />
+                <span>Our services</span>
+              </p>
+              <h2 class="u-headline-secondary">
+                Adventure Unleashed Discover Your Next
+              </h2>
+              <div class="countries__slide-controls">
+                <button class="btn btn-icon btn--outline-light">
+                  <i class="btn__arrow" aria-hidden="true">🡪</i>
+                </button>
+                <button class="btn btn-icon btn--primary">
+                  <i class="btn__arrow" aria-hidden="true">🡪</i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="countries__slide">
+            <div class="countries__item item">
+              <img
+                src="./assets/images/canada.jpg"
+                alt="Canada Ontario"
+                class="countries__img"
+              />
+              <img
+                src="./assets/images/canada-flag.png"
+                alt="Canada flag"
+                class="countries__flag"
+              />
+            </div>
+
+            <div class="countries__item item">
+              <img
+                src="./assets/images/russia.jpg"
+                alt="Russia Moscow"
+                class="countries__img"
+              />
+              <img
+                src="./assets/images/russia-flag.png"
+                alt="Russia flag"
+                class="countries__flag"
+              />
+              <div class="countries__info l-flex u-flex-col">
+                <h3 class="u-sub-headline">Working Visa</h3>
+                <p>
+                  Lorem Ipsum is simply dummy text the printing and provide best
+                  visa ever
+                </p>
+                <button class="btn btn--outline-light">
+                  Apply Now
+                  <i aria-hidden="true">🡪</i>
+                </button>
+              </div>
+            </div>
+
+            <div class="countries__item item">
+              <img
+                src="./assets/images/countries-brazil.jpg"
+                alt="Brazil Rio de Janeiro"
+                class="countries__img"
+              />
+              <img
+                src="./assets/images/brazil-flag.png"
+                alt="Brazil flag"
+                class="countries__flag"
+              />
+            </div>
+
+            <div class="countries__item item">
+              <img
+                src="./assets/images/china.jpg"
+                alt="China Shanghai"
+                class="countries__img"
+              />
+              <img
+                src="./assets/images/china-flag.png"
+                alt="Canada flag"
+                class="countries__flag"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="visa l-grid-main">
+        <div class="l-wrapper">
+          <div class="visa__header">
+            <p class="u-section__label l-flex u-flex-ac">
+              <img
+                src="./assets/images/ticket.svg"
+                alt=""
+                class="u-label-icon"
+              />
+              <span>Visa Category</span>
+            </p>
+            <h2 class="u-headline-secondary">
+              Seeking Adventure Thrills and Excitement Await
+            </h2>
+          </div>
+          <ul class="visa__categories">
+            <li class="visa__item l-grid">
+              <img
+                src="./assets/images/service-5x.jpg"
+                alt="business Visa"
+                class="visa__img"
+                width="258"
+                height="258"
+              />
+              <div class="visa__details l-flex u-flex-col">
+                <h3 class="u-sub-headline">Business Visa</h3>
+                <p>
+                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
+                  quis the venenatis cras sed eu
+                </p>
+                <div class="visa__footer l-flex u-flex-jb-center">
+                  <button class="btn btn-icon-only btn--outline-success">
+                    <i class="btn__arrow" aria-hidden="true">🡥</i>
+                  </button>
+                  <img
+                    src="./assets/images/student-visa-icon.svg"
+                    alt=""
+                    class="visa__icon"
+                    width="45"
+                    height="45"
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="visa__item l-grid">
+              <img
+                src="./assets/images/service-2x.jpg"
+                alt="Working visa"
+                class="visa__img"
+                width="258"
+                height="258"
+              />
+              <div class="visa__details l-flex u-flex-col">
+                <h3 class="u-sub-headline">Working Visa</h3>
+                <p>
+                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
+                  quis the venenatis cras sed eu
+                </p>
+                <div class="visa__footer l-flex u-flex-jb-center">
+                  <button class="btn btn-icon-only btn--outline-success">
+                    <i class="btn__arrow" aria-hidden="true">🡥</i>
+                  </button>
+                  <img
+                    src="./assets/images/working-visa-icon.svg"
+                    alt=""
+                    class="visa__icon"
+                    width="45"
+                    height="45"
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="visa__item l-grid">
+              <img
+                src="./assets/images/service-3x.jpg"
+                alt="Student Visa"
+                class="visa__img"
+                width="258"
+                height="258"
+              />
+              <div class="visa__details l-flex u-flex-col">
+                <h3 class="u-sub-headline">Student Visa</h3>
+                <p>
+                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
+                  quis the venenatis cras sed eu
+                </p>
+                <div class="visa__footer l-flex u-flex-jb-center">
+                  <button class="btn btn-icon-only btn--outline-success">
+                    <i class="btn__arrow" aria-hidden="true">🡥</i>
+                  </button>
+                  <img
+                    src="./assets/images/student-visa-icon.svg"
+                    alt=""
+                    class="visa__icon"
+                    width="45"
+                    height="45"
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="visa__item l-grid">
+              <img
+                src="./assets/images/service-1x.jpg"
+                alt="Student Visa"
+                class="visa__img"
+                width="258"
+                height="258"
+              />
+              <div class="visa__details l-flex u-flex-col">
+                <h3 class="u-sub-headline">Tourist Visa</h3>
+                <p>
+                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
+                  quis the venenatis cras sed eu
+                </p>
+                <div class="visa__footer l-flex u-flex-jb-center">
+                  <button class="btn btn-icon-only btn--outline-success">
+                    <i class="btn__arrow" aria-hidden="true">🡥</i>
+                  </button>
+                  <img
+                    src="./assets/images/tourist-visa-icon.svg"
+                    alt=""
+                    class="visa__icon"
+                    width="45"
+                    height="45"
+                  />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="testimonials l-grid-main">
+        <div class="l-wrapper">
+          <div class="testimonials__header">
+            <p class="u-section__label l-flex u-flex-ac">
+              <img
+                src="./assets/images/ticket.svg"
+                alt=""
+                class="u-label-icon"
+              />
+              <span>Client testimonials</span>
+            </p>
+            <h2 class="u-headline-secondary">
+              Escape to Extraordinary Where Every Journey
+            </h2>
+          </div>
+
+          <div class="testimonials__content l-grid">
+            <div class="testimonials__slides">
+              <div class="testimonials__item item">
+                <img
+                  src="./assets/images/quotes.png"
+                  alt=""
+                  class="testimonials__icon"
+                  width="66"
+                  height="52"
+                />
+                <p>
+                  Leverage agile frameworks to provide a robust syns is for
+                  strategy foster Leverage agile frameworks to provide a robust
+                  synopsis for go for strategy foster
+                </p>
+
+                <div class="l-flex u-flex-ac">
+                  <img
+                    src="./assets/images/russia.jpg"
+                    alt="Eleanor Pena"
+                    class="testimonials__avatar"
+                    width="80"
+                    height="80"
+                  />
+                  <div class="l-flex u-flex-col">
+                    <h3 class="testimonials__name">Eleanor Pena</h3>
+                    <p>President of Sales</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonials__controls">
+                <button
+                  class="testimonials__btn btn btn--outline-success btn-icon-only"
+                >
+                  <i class="btn__arrow" aria-hidden="true">🡨</i>
+                </button>
+
+                <button
+                  class="testimonials__btn btn btn-icon-only btn--primary"
+                >
+                  <i class="btn__arrow" aria-hidden="true">🡪</i>
+                </button>
+              </div>
+            </div>
+
+            <img
+              src="./assets/images/testimonials-cover.jpg"
+              alt=""
+              class="testimonial__cover"
+              width="500"
+              height="480"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="faq l-grid-main">
+        <div class="l-wrapper">
+          <div class="faq__header">
+            <p class="u-section__label l-flex u-flex-ac">
+              <img
+                src="./assets/images/ticket.svg"
+                alt=""
+                class="u-label-icon"
+              />
+              <span>Faq</span>
+            </p>
+            <h2 class="u-headline-secondary">
+              Escape to Extraordinary Where Every Journey
+            </h2>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion__item">
+              <h3 class="u-sub-headline">
+                <button
+                  class="js-accordion-trigger l-flex u-flex-jb u-flex-ac"
+                  id="accordion-header-1"
+                  aria-expanded="true"
+                  aria-controls="accordion-panel-1"
+                >
+                  <span>What services do you offer?</span>
+                  <span class="faq__btn btn btn-icon-only btn--outline-success"
+                    ><i class="btn__arrow" aria-hidden="true">🡪</i>
+                  </span>
+                </button>
+              </h3>
+
+              <div
+                id="accordion-panel-1"
+                role="region"
+                aria-labelledby="accordion-header-1"
+                class="accordion__panel"
+              >
+                Lorem Ipsum is simply dummy text the printing and typese Lorem
+                Ipsum has been the industry's standard dummy text ever
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <h3 class="u-sub-headline">
+                <button
+                  class="js-accordion-trigger l-flex u-flex-jb u-flex-ac"
+                  id="accordion-header-2"
+                  aria-expanded="false"
+                  aria-controls="accordion-panel-2"
+                >
+                  <span
+                    >How long does it take for you to complete a project?</span
+                  >
+                  <span class="faq__btn btn btn-icon-only btn--outline-success"
+                    ><i class="btn__arrow" aria-hidden="true">🡪</i>
+                  </span>
+                </button>
+              </h3>
+
+              <div
+                id="accordion-panel-2"
+                role="region"
+                aria-labelledby="accordion-header-2"
+                class="accordion__panel"
+              >
+                Lorem Ipsum is simply dummy text the printing and types Lorem
+                Ipsum has been the industry's standard dummy text ever
+              </div>
+            </div>
+
+            <div class="accordion__item">
+              <h3 class="u-sub-headline">
+                <button
+                  class="js-accordion-trigger l-flex u-flex-jb u-flex-ac"
+                  id="accordion-header-3"
+                  aria-expanded="false"
+                  aria-controls="accordion-panel-3"
+                >
+                  <span>How much does it cost to work with your agency?</span>
+                  <span class="faq__btn btn btn-icon-only btn--outline-success"
+                    ><i class="btn__arrow" aria-hidden="true">🡪</i>
+                  </span>
+                </button>
+              </h3>
+
+              <div
+                id="accordion-panel-3"
+                role="region"
+                aria-labelledby="accordion-header-3"
+                class="accordion__panel"
+              >
+                Lorem Ipsum is simply dummy text the printing and types Lorem
+                Ipsum has been the industry's standard dummy text ever
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer l-grid-main">
+      <div class="l-grid footer__wrapper">
+        <div>
+          <img
+            src="./assets/images/footer-logo.png"
+            alt="Routex Home"
+            class="footer__logo"
+            width="157"
+            height="40"
+          />
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <nav class="footer__social l-flex u-flex-ac" aria-label="Social">
+            <a href="#">
+              <img
+                src="./assets/images/facebook.svg"
+                alt="Routex Facebook Home"
+                class="footer__brands"
+                width="20"
+                height="20"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="./assets/images/instagram.svg"
+                alt="Routex Instagram Home"
+                class="footer__brands"
+                width="20"
+                height="20"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="./assets/images/x.svg"
+                alt="Routex X Home"
+                class="footer__brands"
+                width="20"
+                height="20"
+              />
+            </a>
+            <a href="#">
+              <img
+                src="./assets/images/linkedin.svg"
+                alt="Routex Linkedin Home"
+                class="footer__brands"
+                width="20"
+                height="20"
+              />
+            </a>
+          </nav>
+        </div>
+
+        <div>
+          <h2 id="services" class="u-sub-headline">Services</h2>
+          <section class="footer__nav" aria-labelledby="services">
+            <ul class="footer__list">
+              <li class="footer__item l-flex u-flex-col">
+                <a class="footer__link l-flex u-flex-ac" href="#">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    class="footer__icon"
+                    width="10"
+                    height="10"
+                  />
+                  Visa Support
+                </a>
+              </li>
+
+              <li class="footer__item l-flex u-flex-col">
+                <a class="footer__link l-flex u-flex-ac" href="#">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    class="footer__icon"
+                    width="10"
+                    height="10"
+                  />
+                  Travel and Tour
+                </a>
+              </li>
+
+              <li class="footer__item l-flex u-flex-col">
+                <a class="footer__link l-flex u-flex-ac" href="#">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    class="footer__icon"
+                    width="10"
+                    height="10"
+                  />
+                  Travel Planning
+                </a>
+              </li>
+
+              <li class="footer__item l-flex u-flex-col">
+                <a class="footer__link l-flex u-flex-ac" href="#">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    class="footer__icon"
+                    width="10"
+                    height="10"
+                  />
+                  Passport Plus
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div>
+          <h2 id="about-us" class="u-sub-headline">About Us</h2>
+          <section class="footer__nav" aria-labelledby="about-us">
+            <ul class="footer__list">
+              <li class="footer__item l-flex u-flex-col">
+                <a class="footer__link l-flex u-flex-ac" href="#">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    class="footer__icon"
+                    width="10"
+                    height="10"
+                  />
+                  Visa Support
+                </a>
+              </li>
+
+              <li class="footer__item l-flex u-flex-col">
+                <a class="footer__link l-flex u-flex-ac" href="#">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    class="footer__icon"
+                    width="10"
+                    height="10"
+                  />
+                  Travel and Tour
+                </a>
+              </li>
+
+              <li class="footer__item l-flex u-flex-col">
+                <a class="footer__link l-flex u-flex-ac" href="#">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    class="footer__icon"
+                    width="10"
+                    height="10"
+                  />
+                  Travel Planning
+                </a>
+              </li>
+
+              <li class="footer__item l-flex u-flex-col">
+                <a class="footer__link l-flex u-flex-ac" href="#">
+                  <img
+                    src="./assets/images/check-mark.svg"
+                    alt=""
+                    class="footer__icon"
+                    width="10"
+                    height="10"
+                  />
+                  Passport Plus
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="footer__newsletter">
+          <h2 class="u-sub-headline">Subscribe Our Newsletter</h2>
+          <p class="footer__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <form class="form footer__form">
+            <div class="form__group">
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Enter your email"
+                S
+              />
+              <button
+                class="testimonials__btn btn btn-icon-only btn--primary"
+                aria-label="subscribe to newsletter"
+              >
+                <i class="btn__arrow" aria-hidden="true">🡪</i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
