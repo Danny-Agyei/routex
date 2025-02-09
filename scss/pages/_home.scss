@@ -1,17 +1,75 @@
-@use "../abstracts/mixin" as *;
-@use "../base/color" as *;
-@use "../base/button" as *;
-@use "../base/typography" as *;
+@use '../base/color' as *;
+@use '../base/variable' as *;
 
-body {
-  margin-inline: auto;
-  padding-block: 2rem;
+// Hero
+.hero {
+    background-color: $color-primary-900;
+    background-image:
+        url("../../assets/images/hero-bg-right.png"), url("../../assets/images/hero-bg-left.png");
+    background-position:
+        bottom right, bottom left;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 10rem, cover;
+
+
+    &__wrapper {
+        padding-block-end: 0;
+        row-gap: 0;
+    }
+
+    &__content {
+        grid-column: 1/ -1;
+    }
+
+    &__headline {
+        color: $color-neutral-100;
+        font-size: 4rem;
+    }
+
+    &__btn-group {
+        gap: $space-x6;
+        margin-block: $space-x8;
+    }
+
+    @keyframes pulse {
+        70% {
+            box-shadow: 0 0 0 3rem rgba($color-primary-500, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba($color-primary-900, 0);
+        }
+
+    }
+
+    &__btn {
+        &:hover {
+            background-color: $color-primary-500;
+            color: $color-neutral-100;
+        }
+    }
+
+    &__play {
+        animation: pulse 2.5s infinite;
+        box-shadow: 0 0 0 0 rgba($color-primary-500, 0.6);
+
+        &:hover {
+            background-color: $color-primary-500;
+        }
+
+    }
+
+    &__banner {
+        grid-column: 1 / -1;
+        background-image: url('../../assets/images/hero-img-bg.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+    }
+
+    &__img {
+        width: 100%;
+    }
 }
 
-h1,
-h2,
-h3,
-p,
-button {
-  grid-column: 2 / -2;
-}
+// Services 

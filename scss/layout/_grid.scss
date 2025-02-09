@@ -4,19 +4,12 @@
 
 .l-grid {
   display: grid;
-}
-
-.l-grid-main {
-  @extend .l-grid;
-  grid-template-columns:
-    1fr repeat(3,
-      calc((min(100% - $space-x10, convert.toRem(540)) - 2 * $space-x5) / 3)) 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: $space-x5;
 
   @include breakpoint("tablet") {
     grid-template-columns:
-      1fr repeat(6,
-        calc((min(100% - $space-x20, convert.toEm(700)) - 5 * $space-x8) / 6)) 1fr;
+      1fr repeat(6, 1fr);
 
     gap: $space-x8;
   }

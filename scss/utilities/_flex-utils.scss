@@ -32,7 +32,7 @@
   }
 }
 
-@include breakpoint("table-landscape") {
+@include breakpoint("tablet-landscape") {
   .u-flex-lg-col {
     flex-direction: column;
   }

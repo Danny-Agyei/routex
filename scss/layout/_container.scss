@@ -1,0 +1,25 @@
+@use "../abstracts/function" as convert;
+@use "../base/variable" as *;
+@use "../abstracts/mixin" as *;
+
+
+.l-container {
+    max-width: min(100% - $space-x10, convert.toRem(540));
+    margin-inline: auto;
+
+    @include breakpoint("tablet") {
+        max-width: convert.toRem(720);
+    }
+
+    @include breakpoint("tablet-landscape") {
+        max-width: convert.toRem(940);
+    }
+
+    @include breakpoint("desktop") {
+        max-width: convert.toRem(1140);
+    }
+
+    @include breakpoint("large") {
+        max-width: convert.toRem(1200);
+    }
+}

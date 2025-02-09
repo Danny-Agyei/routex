@@ -60,8 +60,8 @@
   </head>
 
   <body>
-    <header class="header l-grid-main">
-      <a href="/home">
+    <header class="header l-container">
+      <a href="/home" class="header__logo-wrapper">
         <img
           src="./assets/images/logo.png"
           alt="Routex Home"
@@ -71,9 +71,10 @@
         />
       </a>
 
-      <nav id="nav-main" class="nav" aria-label="Main">
+      <nav id="nav-main" class="header__nav nav" aria-label="Main">
+        <div class="nav__overlay" hidden></div>
         <div class="nav__wrapper">
-          <ul class="nav__list">
+          <ul class="nav__list l-flex u-flex-col">
             <li>
               <a href="/home" class="nav__link" aria-current="page">Home</a>
             </li>
@@ -86,26 +87,42 @@
 
           <!-- Close Button -->
           <button
-            class="nav__toggle"
+            class="nav__toggle nav__toggle--close"
             aria-label="Close Main Navigation"
             aria-controls="nav-main"
             aria-expanded="true"
           >
             <svg
-              aria-hidden="true"
+              viewBox="0 0 32 31"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 384 512"
+              aria-hidden="true"
             >
-              <path
-                d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-              />
+              <rect
+                id="Rectangle"
+                x="2.91846"
+                y="0.297211"
+                width="40"
+                height="3"
+                transform="rotate(45 2.91846 0.297211)"
+                fill="#151619"
+              ></rect>
+              <rect
+                id="Rectangle_2"
+                x="0.797363"
+                y="28.5815"
+                width="40"
+                height="3"
+                transform="rotate(-45 0.797363 28.5815)"
+                fill="#151619"
+              ></rect>
             </svg>
           </button>
         </div>
 
         <!-- Open Button -->
         <button
-          class="nav__toggle"
+          class="nav__toggle nav__toggle--open"
           aria-label="Open Main Navigation"
           aria-controls="nav-main"
           aria-expanded="false"
@@ -123,56 +140,58 @@
       </nav>
 
       <button class="btn btn--primary header__btn">
-        Schedule Now
+        Book a Call
         <i class="btn__arrow" aria-hidden="true">🡪</i>
       </button>
     </header>
 
     <main>
       <section class="hero">
-        <div class="hero__wrapper l-grid-main">
-          <div class="hero__content">
-            <h1 class="u-headline-primary">
-              Visa Immigration: Way for Your Brighter Future
-            </h1>
-            <div class="hero__cta-btns l-flex">
-              <button class="hero__btn btn btn--outline-light">
-                Read more
-                <i class="btn__arrow" aria-hidden="true">🡪</i>
-              </button>
-              <button
-                class="hero__btn hero__btn--play btn btn-icon-only btn--outline-success"
-                aria-label="Play Our Video"
-              >
-                <svg
-                  aria-hidden="true"
-                  width="21"
-                  height="23"
-                  viewBox="0 0 21 23"
-                  fill="white"
-                  xmlns="http://www.w3.org/2000/svg"
+        <div class="l-container">
+          <div class="hero__wrapper u-wrapper l-grid">
+            <div class="hero__content">
+              <h1 class="hero__headline u-headline-primary">
+                From Dream to Destination - Your Travel Partner Awaits
+              </h1>
+              <div class="hero__btn-group l-flex">
+                <button class="hero__btn btn btn--light">
+                  Read more
+                  <i class="btn__arrow" aria-hidden="true">🡪</i>
+                </button>
+                <button
+                  class="hero__play btn btn-icon-only btn--primary"
+                  aria-label="Play Our Video"
                 >
-                  <path
-                    d="M0.285475 1.82497C0.285475 0.565117 1.64931 -0.222297 2.74038 0.407632L19.387 10.0186C20.4781 10.6485 20.4781 12.2233 19.387 12.8533L2.74038 22.4642C1.64931 23.0941 0.285475 22.3067 0.285475 21.0469L0.285475 1.82497Z"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    aria-hidden="true"
+                    width="21"
+                    height="23"
+                    viewBox="0 0 21 23"
+                    fill="white"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.285475 1.82497C0.285475 0.565117 1.64931 -0.222297 2.74038 0.407632L19.387 10.0186C20.4781 10.6485 20.4781 12.2233 19.387 12.8533L2.74038 22.4642C1.64931 23.0941 0.285475 22.3067 0.285475 21.0469L0.285475 1.82497Z"
+                    />
+                  </svg>
+                </button>
+              </div>
             </div>
-          </div>
-          <div class="hero__banner">
-            <img
-              src="./assets/images/hero-image-4x.png"
-              alt="Man with pink luggage waving and smiling"
-              class="hero__img"
-              width="300"
-              height="300"
-            />
+            <div class="hero__banner">
+              <img
+                src="./assets/images/about-1x.png"
+                alt="Man with pink luggage waving and smiling"
+                class="hero__img"
+                width="300"
+                height="300"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="services" class="services l-grid-main">
-        <div class="l-wrapper">
+      <section id="services" class="services l-container">
+        <div class="u-wrapper">
           <div class="services__header">
             <p class="u-section__label l-flex u-flex-ac">
               <img
@@ -221,8 +240,8 @@
         </div>
       </section>
 
-      <section class="about l-grid-main">
-        <div class="l-wrapper">
+      <section class="about l-container">
+        <div class="u-wrapper">
           <div class="about__content l-flex u-flex-col">
             <div class="about__header">
               <p class="u-section__label l-flex u-flex-ac">
@@ -353,8 +372,8 @@
         </div>
       </section>
 
-      <section class="companies l-grid-main">
-        <div class="l-wrapper l-flex u-flex-col u-flex-md-row">
+      <section class="companies l-container">
+        <div class="u-wrapper l-flex u-flex-col u-flex-md-row">
           <img
             src="./assets/images/segment.png"
             alt="segment"
@@ -393,8 +412,8 @@
         </div>
       </section>
 
-      <section class="countries l-grid-main">
-        <div class="l-wrapper">
+      <section class="countries l-container">
+        <div class="u-wrapper">
           <div class="countries__header">
             <div>
               <p class="u-section__label l-flex u-flex-ac">
@@ -485,8 +504,8 @@
         </div>
       </section>
 
-      <section class="visa l-grid-main">
-        <div class="l-wrapper">
+      <section class="visa l-container">
+        <div class="u-wrapper">
           <div class="visa__header">
             <p class="u-section__label l-flex u-flex-ac">
               <img
@@ -620,8 +639,8 @@
         </div>
       </section>
 
-      <section class="testimonials l-grid-main">
-        <div class="l-wrapper">
+      <section class="testimonials l-container">
+        <div class="u-wrapper">
           <div class="testimonials__header">
             <p class="u-section__label l-flex u-flex-ac">
               <img
@@ -693,8 +712,8 @@
         </div>
       </section>
 
-      <section class="faq l-grid-main">
-        <div class="l-wrapper">
+      <section class="faq l-container">
+        <div class="u-wrapper">
           <div class="faq__header">
             <p class="u-section__label l-flex u-flex-ac">
               <img
@@ -794,7 +813,7 @@
       </section>
     </main>
 
-    <footer class="footer l-grid-main">
+    <footer class="footer l-container">
       <div class="l-grid footer__wrapper">
         <div>
           <img

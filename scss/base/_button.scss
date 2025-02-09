@@ -24,6 +24,19 @@
     padding: 0;
   }
 
+  &--light {
+    background-color: $color-neutral-100;
+    color: $color-primary-900;
+
+    svg {
+      fill: $color-primary-900;
+    }
+
+    &:hover {
+      background-color: $color-primary-900;
+    }
+  }
+
   &--primary {
     background-color: $color-primary-500;
     color: $color-neutral-100;
