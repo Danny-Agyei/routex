@@ -9,26 +9,20 @@
 
   @include breakpoint("tablet") {
     grid-template-columns:
-      1fr repeat(6, 1fr);
+      repeat(6, 1fr);
 
     gap: $space-x8;
   }
 
   @include breakpoint("tablet-landscape") {
     grid-template-columns:
-      1fr repeat(12,
-        calc((min(100% - $space-x20, convert.toEm(940)) - 11 * $space-x8) / 12)) 1fr;
+      repeat(12, 1fr);
   }
 
-  @include breakpoint("desktop") {
-    grid-template-columns:
-      1fr repeat(12,
-        calc((min(100% - $space-x20, convert.toEm(1140)) - 11 * $space-x8) / 12)) 1fr;
-  }
+  // @include breakpoint("desktop") {
+  //   grid-template-columns:
+  //     1fr repeat(12,
+  //       calc((min(100% - $space-x20, convert.toEm(1140)) - 11 * $space-x8) / 12)) 1fr;
+  // }
 
-  @include breakpoint("large") {
-    grid-template-columns:
-      1fr repeat(12,
-        calc((min(100% - $space-x20, convert.toEm(1280)) - 11 * $space-x8) / 12)) 1fr;
-  }
 }

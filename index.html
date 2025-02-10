@@ -61,7 +61,7 @@
 
   <body>
     <header class="header l-container">
-      <a href="/home" class="header__logo-wrapper">
+      <a href="/" class="header__logo-wrapper">
         <img
           src="./assets/images/logo.png"
           alt="Routex Home"
@@ -139,10 +139,10 @@
         </button>
       </nav>
 
-      <button class="btn btn--primary header__btn">
+      <a href="#" class="btn btn--primary header__btn">
         Book a Call
         <i class="btn__arrow" aria-hidden="true">🡪</i>
-      </button>
+      </a>
     </header>
 
     <main>
@@ -153,11 +153,11 @@
               <h1 class="hero__headline u-headline-primary">
                 From Dream to Destination - Your Travel Partner Awaits
               </h1>
-              <div class="hero__btn-group l-flex">
-                <button class="hero__btn btn btn--light">
-                  Read more
+              <div class="hero__btn-group l-flex u-flex-jc-center">
+                <a href="#" class="hero__btn btn btn--light">
+                  Book a Consultation
                   <i class="btn__arrow" aria-hidden="true">🡪</i>
-                </button>
+                </a>
                 <button
                   class="hero__play btn btn-icon-only btn--primary"
                   aria-label="Play Our Video"
@@ -191,9 +191,9 @@
       </section>
 
       <section id="services" class="services l-container">
-        <div class="u-wrapper">
+        <div class="l-flex u-flex-col u-flex-center u-wrapper">
           <div class="services__header">
-            <p class="u-section__label l-flex u-flex-ac">
+            <p class="u-section-label l-flex u-flex-center">
               <img
                 src="./assets/images/ticket.svg"
                 alt=""
@@ -205,8 +205,10 @@
               Adventure Unleashed Discover Your Next
             </h2>
           </div>
-          <ul class="l-grid">
-            <li class="service__item l-flex u-flex-col u-flex-center">
+          <ul class="services__list l-grid">
+            <li
+              class="services__item l-flex u-flex-col u-flex-center card card--light card--b-dark"
+            >
               <img
                 src="./assets/images/tour.png"
                 alt=""
@@ -214,9 +216,19 @@
                 width="100"
                 height="100"
               />
-              <h3 class="u-sub-headline">Food and Wine Tours</h3>
+              <h3 class="services__title u-sub-headline">
+                Food and Wine Tours
+              </h3>
+              <p>
+                Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus
+                nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                sit amet rcus nunc.
+              </p>
             </li>
-            <li class="service__item l-flex u-flex-col u-flex-center">
+
+            <li
+              class="services__item l-flex u-flex-col u-flex-center card card--light card--b-dark"
+            >
               <img
                 src="./assets/images/travel-opportunities.png"
                 alt=""
@@ -224,9 +236,19 @@
                 width="100"
                 height="100"
               />
-              <h3 class="u-sub-headline">Food and Wine Tours</h3>
+              <h3 class="services__title u-sub-headline">
+                Food and Wine Tours
+              </h3>
+              <p>
+                Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus
+                nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                sit amet rcus nunc.
+              </p>
             </li>
-            <li class="service__item l-flex u-flex-col u-flex-center">
+
+            <li
+              class="services__item l-flex u-flex-col u-flex-center card card--light card--b-dark"
+            >
               <img
                 src="./assets/images/travel-planning.png"
                 alt=""
@@ -234,17 +256,28 @@
                 width="100"
                 height="100"
               />
-              <h3 class="u-sub-headline">Food and Wine Tours</h3>
+              <h3 class="services__title u-sub-headline">
+                Food and Wine Tours
+              </h3>
+              <p>
+                Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus
+                nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                sit amet rcus nunc.
+              </p>
             </li>
           </ul>
+          <button class="services__btn btn btn--primary">
+            Read more
+            <i class="btn__arrow" aria-hidden="true">🡪</i>
+          </button>
         </div>
       </section>
 
-      <section class="about l-container">
-        <div class="u-wrapper">
+      <section class="about">
+        <div class="l-container u-wrapper l-grid">
           <div class="about__content l-flex u-flex-col">
             <div class="about__header">
-              <p class="u-section__label l-flex u-flex-ac">
+              <p class="u-section-label l-flex u-flex-ac">
                 <img
                   src="./assets/images/ticket.svg"
                   alt=""
@@ -257,117 +290,122 @@
               </h2>
             </div>
 
-            <p>
-              Et purus duis sollicitudin dignissim habitant. Egestas nulla quis
-              venenatis cras sed eu massa Et purus duis sollicitudin dignissim
-              habitant. Egestas nulla quis venenatis cras sed eu massa Et purus
-              duis sollicitudin dignissim habitant. Egestas nulla
+            <p class="about__description">
+              Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus nun
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet rcus nunc. Duis egestas ac
             </p>
 
-            <div class="about__recognitions">
-              <div class="about__card l-flex u-flex-col">
-                <div class="l-flex u flex-ac">
+            <div class="about__work">
+              <div
+                class="about__card card card--md card--b-dark l-flex u-flex-col"
+              >
+                <div class="about__card-header l-flex u-flex-ac">
                   <img
                     src="./assets/images/passport-plus.png"
                     alt=""
                     class="about__icon"
                   />
-                  <h3 class="u-sub-headline">Passport Plus</h3>
+                  <h3 class="about__title u-sub-headline">Passport Plus</h3>
                 </div>
-                <div class="l-flex u flex-ac">
+                <div class="l-flex u-flex-ac">
                   <img
                     src="./assets/images/check-mark.svg"
                     alt=""
                     width="16"
                     height="16"
                   />
-                  <p>Beyond Border Immigration</p>
+                  <p class="about__text">Beyond Border Immigration</p>
                 </div>
-                <div class="l-flex u flex-ac">
+                <div class="l-flex u-flex-ac">
                   <img
                     src="./assets/images/check-mark.svg"
                     alt=""
                     width="16"
                     height="16"
                   />
-                  <p>Worldwide Visa Assistance</p>
+                  <p class="about__text">Worldwide Visa Assistance</p>
                 </div>
               </div>
 
-              <div class="about__card l-flex u-flex-col">
-                <div class="l-flex u flex-ac">
+              <div
+                class="about__card card card--b-dark card--md l-flex u-flex-col"
+              >
+                <div class="about__card-header l-flex u-flex-ac">
                   <img
                     src="./assets/images/global-entry.png"
                     alt=""
                     class="about__icon"
                   />
-                  <h3 class="u-sub-headline">Global Entry</h3>
+                  <h3 class="about__title u-sub-headline">Global Entry</h3>
                 </div>
-                <div class="l-flex u flex-ac">
+                <div class="l-flex u-flex-ac">
                   <img
                     src="./assets/images/check-mark.svg"
                     alt=""
                     width="16"
                     height="16"
                   />
-                  <p>GlobeTrot Visa Services</p>
+                  <p class="about__text">GlobeTrot Visa Services</p>
                 </div>
-                <div class="l-flex u flex-ac">
+                <div class="l-flex u-flex-ac">
                   <img
                     src="./assets/images/check-mark.svg"
                     alt=""
                     width="16"
                     height="16"
                   />
-                  <p>Infinity Visa Solutions</p>
+                  <p class="about__text">Infinity Visa Solutions</p>
                 </div>
               </div>
             </div>
 
-            <div class="about__contact l-flex u-flex-ac">
-              <button class="btn btn--outline-success">
-                Read more <i aria-hidden="true">🡪</i>
+            <div class="about__contact l-flex u-flex-col">
+              <button class="about__btn btn btn--primary">
+                Learn more <i aria-hidden="true">🡪</i>
               </button>
               <div class="l-flex u-flex-ac about__phone">
                 <img
                   src="./assets/images/phone.png"
                   alt=""
-                  width="55"
-                  height="55"
+                  width="45"
+                  height="45"
                 />
                 <div>
-                  <p>Need help?</p>
-                  <a href="tel:(808)555-0111" class="about__number"
-                    >(808)555-0111</a
-                  >
+                  <p class="about__text">Need help?</p>
+                  <a href="tel:(808)555-0111">(808)555-0111</a>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="about__gallery l-grid">
-            <img
-              src="./assets/images/about-3x.jpg"
-              alt=""
-              class="about__img-one"
-            />
-
-            <div class="about__experience l-flex u-flex-center">
-              <h3 class="about__years">25</h3>
-              <p>Years of Experience</p>
+            <div class="item item-1">
+              <img
+                src="./assets/images/about-3x.jpg"
+                alt=""
+                class="about__img about__img--one"
+              />
             </div>
 
-            <img
-              src="./assets/images/about-badge.png"
-              alt=""
-              class="about__img-two"
-            />
-
-            <img
-              src="./assets/images/about-4x.jpg"
-              alt=""
-              class="about__img-three"
-            />
+            <div class="about__experience card card--md l-flex u-flex-center">
+              <h3 class="about__years">25</h3>
+              <p>Years of <br />Experience</p>
+            </div>
+            <div class="item item-2">
+              <img
+                src="./assets/images/about-badge.png"
+                alt=""
+                class="about__img about__img--two"
+              />
+            </div>
+            <div class="item item-3">
+              <img
+                src="./assets/images/about-4x.jpg"
+                alt=""
+                class="about__img about__img--three"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -416,7 +454,7 @@
         <div class="u-wrapper">
           <div class="countries__header">
             <div>
-              <p class="u-section__label l-flex u-flex-ac">
+              <p class="u-section-label l-flex u-flex-ac">
                 <img
                   src="./assets/images/ticket.svg"
                   alt=""
@@ -507,7 +545,7 @@
       <section class="visa l-container">
         <div class="u-wrapper">
           <div class="visa__header">
-            <p class="u-section__label l-flex u-flex-ac">
+            <p class="u-section-label l-flex u-flex-ac">
               <img
                 src="./assets/images/ticket.svg"
                 alt=""
@@ -642,7 +680,7 @@
       <section class="testimonials l-container">
         <div class="u-wrapper">
           <div class="testimonials__header">
-            <p class="u-section__label l-flex u-flex-ac">
+            <p class="u-section-label l-flex u-flex-ac">
               <img
                 src="./assets/images/ticket.svg"
                 alt=""
@@ -715,7 +753,7 @@
       <section class="faq l-container">
         <div class="u-wrapper">
           <div class="faq__header">
-            <p class="u-section__label l-flex u-flex-ac">
+            <p class="u-section-label l-flex u-flex-ac">
               <img
                 src="./assets/images/ticket.svg"
                 alt=""

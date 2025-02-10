@@ -1,0 +1,15 @@
+@use '../base/variable' as *;
+@use '../base/color' as *;
+
+.u-wrapper {
+    padding-block: $space-x20;
+}
+
+.u-section-label {
+    align-items: center;
+    color: $color-primary-900;
+    display: flex;
+    gap: $space-x2;
+    line-height: 1;
+    margin-block-end: $space-x4;
+}

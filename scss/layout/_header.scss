@@ -1,6 +1,6 @@
  @use '../abstracts/function' as convert;
- @use '../base/index' as *;
- @use '../utilities/flex-utils' as *;
+ @use '../base/variable' as *;
+ @use '../base/color' as *;
 
  .header {
      align-items: center;

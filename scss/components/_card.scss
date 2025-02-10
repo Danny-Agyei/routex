@@ -1,0 +1,30 @@
+@use '../base/variable' as *;
+@use '../base/color' as *;
+
+.card {
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: $radius-sm;
+    padding: $space-x5;
+
+    &--md {
+        padding: $space-x8;
+    }
+
+    &--lg {
+        padding: $space-x10;
+    }
+
+    &--light {
+        background-color: $color-neutral-100;
+    }
+
+    &--b-success {
+        border-color: $color-primary-500;
+    }
+
+    &--b-dark {
+        border-color: $color-neutral-200;
+    }
+}

@@ -1,14 +1,13 @@
 @use "../abstracts/function" as convert;
-@use "../base/color" as *;
 
 .u-headline-primary {
-  font-size: convert.toRem(28);
-  font-size: clamp(convert.toRem(28), 1.65rem + 3.525vw, convert.toRem(80));
+  font-size: convert.toRem(44);
+  font-size: clamp(convert.toRem(44), 1.65rem + 3.525vw, convert.toRem(80));
 }
 
 .u-headline-secondary {
   font-size: convert.toRem(24);
-  font-size: clamp(convert.toRem(20),
+  font-size: clamp(convert.toRem(24),
       1.6055825242718447rem + 1.6828478964401297vw,
       convert.toRem(50));
 }
@@ -21,5 +20,7 @@
 }
 
 .u-section-label {
-  color: $color-primary-900;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }

@@ -8,11 +8,15 @@
   align-items: center;
 }
 
+.u-flex-jc-center {
+  justify-content: center;
+}
+
 .u-flex-jb {
   justify-content: space-between;
 }
 
-.u-flex-jb-center {
+.u-flex-jc-between {
   align-items: center;
   justify-content: space-between;
 }
