@@ -40,6 +40,84 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+
+/* Kit Sans */
+@font-face {
+  font-display: swap;
+  font-family: "Kit Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/kitsans-bold.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Kit Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/kitsans-bold.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Kit Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../assets/fonts/kitsans-bold.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Kit Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../assets/fonts/kitsans-bold.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+/* Libre Franklin */
+@font-face {
+  font-display: swap;
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../assets/fonts/libre-franklin.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../../assets/fonts/libre-franklin.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../assets/fonts/libre-franklin.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../../assets/fonts/libre-franklin.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
 *,
 *::before,
 *::after {
@@ -50,7 +128,8 @@
 }
 
 html {
-  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  // font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  font-family: "Libre Franklin", Arial, Helvetica, sans-serif;
   font-size: 0.625rem;
   scroll-behavior: smooth;
 }
@@ -58,8 +137,8 @@ html {
 body {
   background-color: $color-primary-100;
   color: $color-neutral-500;
-  font-size: 1.6rem;
-  line-height: 1.875;
+  font-size: 1.5rem;
+  line-height: 1.5;
   min-height: 100vh;
 
   &.noscroll {
@@ -105,6 +184,11 @@ h4,
 h5 {
   font-size: inherit;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1;
   color: $color-primary-900;
+}
+
+h1,
+h2 {
+  font-family: "kit Sans", Arial, Helvetica, sans-serif;
 }

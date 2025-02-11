@@ -11,16 +11,16 @@
         bottom right, bottom left;
     background-repeat: no-repeat, no-repeat;
     background-size: 10rem, cover;
+    margin-block-end: $space-x16;
 
 
     &__wrapper {
-        padding-block: $space-x16 0;
+        padding-block: $space-x25 0;
         row-gap: 0;
     }
 
     &__content {
         grid-column: 1/ -1;
-        text-align: center;
     }
 
     &__headline {
@@ -29,7 +29,7 @@
 
     &__btn-group {
         gap: $space-x6;
-        margin-block: $space-x8;
+        margin-block: $space-x10;
     }
 
     @keyframes pulse {
@@ -44,6 +44,8 @@
     }
 
     &__btn {
+        padding-block: $space-x4;
+
         &:hover {
             background-color: $color-primary-500;
             color: $color-neutral-100;
@@ -53,6 +55,8 @@
     &__play {
         animation: pulse 2.5s infinite;
         box-shadow: 0 0 0 0 rgba($color-primary-500, 0.6);
+        height: 6rem;
+        width: 6rem;
 
         &:hover {
             background-color: $color-primary-500;
@@ -70,6 +74,8 @@
 
     &__img {
         width: 100%;
+        max-width: 48rem;
+        margin-inline: auto;
     }
 }
 
@@ -79,6 +85,7 @@
     &__header {
         margin-block-end: $space-x10;
         text-align: center;
+        max-width: 25ch;
     }
 
     &__list {
@@ -104,6 +111,11 @@
 // About 
 .about {
     background-color: $color-neutral-100;
+    padding-block-end: $space-x16;
+
+    &__wrapper {
+        position: relative;
+    }
 
     &__content {
         grid-column: 1/ -1;
@@ -111,7 +123,7 @@
 
     &__work {
         display: grid;
-        gap: $space-x2;
+        gap: $space-x5;
         grid-template-columns: 1fr;
     }
 
@@ -137,12 +149,13 @@
     }
 
     &__contact {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        align-items: center;
         gap: $space-x4;
         margin-block-start: $space-x10;
-    }
-
-    &__btn {
-        align-self: flex-start;
     }
 
     &__phone {
@@ -155,37 +168,27 @@
     }
 
     &__gallery {
+        gap: $space-x5;
         grid-column: 1/ -1;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 12.7rem 1fr 15rem;
-        gap: $space-x5;
+        grid-template-rows: 8rem 1fr 12.7rem;
+        margin-block-start: $space-x8;
 
         @include breakpoint('tablet') {
             grid-template-rows: 15rem 30rem 20rem;
         }
     }
 
+
     &__img {
+        border-radius: $radius-sm;
+        height: 100%;
+        object-fit: cover;
         width: 100%;
-
-        // &--one {
-        //     grid-column: 1 / 4;
-        // }
-
-        // &--two {
-        //     grid-column: 1 / 4;
-        //     grid-row: 2 / 3;
-        // }
-
-        // &--three {
-        //     grid-column: 4 / -1;
-        //     grid-row: 2 / 3;
-        // }
     }
 
-
-
     &__experience {
+        border-radius: $radius-sm;
         background-color: $color-primary-500;
         gap: $space-x4;
         line-height: 1.4;
@@ -194,54 +197,82 @@
     }
 
     &__years {
-        font-size: 4rem;
+        font-size: 3rem;
         color: $color-neutral-100;
+    }
+
+    &__item {
+        justify-self: center;
+        align-self: end;
+        height: 100%;
+        max-width: 70rem;
+
+        &--one {
+            grid-column: 1 / 4;
+            grid-row: 1 / span 2;
+
+            @include breakpoint('tablet') {
+                justify-self: stretch;
+            }
+        }
+
+        &--two {
+            grid-column: 1 / 4;
+            grid-row: 3 / -1;
+
+            img {
+                max-width: 15rem;
+                max-height: 12.7rem;
+
+                @include breakpoint('tablet') {
+                    max-width: 20rem;
+                    max-height: 100%;
+                    justify-self: center;
+                }
+            }
+        }
+
+        &--three {
+            grid-column: 4 / -1;
+            grid-row: 2 / -1;
+        }
     }
 }
 
-.item {
-    justify-self: center;
-    align-self: end;
-    height: 100%;
-    max-width: 70rem;
+// Companies 
+.companies {
+    &__wrapper {
+        gap: $space-x4;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
 
-    img {
-        width: 100%;
-        object-fit: cover;
-        border-radius: $radius-sm;
+    &__img {
+        max-width: 12.5rem;
 
-        @include breakpoint('tablet') {
-            height: 100%;
+        &:last-child {
+            grid-column: 1 / -1;
         }
     }
+}
 
-    &-1 {
-        grid-column: 1 / 4;
-        grid-row: 1 / span 2;
+// Countries
 
-        @include breakpoint('tablet') {
-            justify-self: stretch;
-        }
+.countries {
+    background-color: $color-primary-900;
+
+    &__wrapper {
+        position: relative;
     }
 
-    &-2 {
-        grid-column: 1 / 4;
-        grid-row: 3 / -1;
-
-        img {
-            max-width: 15rem;
-            max-height: 12.7rem;
-
-            @include breakpoint('tablet') {
-                max-width: 20rem;
-                max-height: 100%;
-                justify-self: center;
-            }
-        }
+    &__header {
+        margin-block-end: $space-x10;
     }
 
-    &-3 {
-        grid-column: 4 / -1;
-        grid-row: 2 / -1;
+    &__headline {
+        color: $color-neutral-100;
     }
+
+    &__slide-controls {}
+
 }

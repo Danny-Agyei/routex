@@ -87,7 +87,7 @@
 
           <!-- Close Button -->
           <button
-            class="nav__toggle nav__toggle--close"
+            class="btn nav__toggle nav__toggle--close"
             aria-label="Close Main Navigation"
             aria-controls="nav-main"
             aria-expanded="true"
@@ -122,7 +122,7 @@
 
         <!-- Open Button -->
         <button
-          class="nav__toggle nav__toggle--open"
+          class="btn nav__toggle nav__toggle--open"
           aria-label="Open Main Navigation"
           aria-controls="nav-main"
           aria-expanded="false"
@@ -151,15 +151,15 @@
           <div class="hero__wrapper u-wrapper l-grid">
             <div class="hero__content">
               <h1 class="hero__headline u-headline-primary">
-                From Dream to Destination - Your Travel Partner Awaits
+                For dreamers who mean to explore the world
               </h1>
-              <div class="hero__btn-group l-flex u-flex-jc-center">
+              <div class="hero__btn-group l-flex u-flex-ac">
                 <a href="#" class="hero__btn btn btn--light">
                   Book a Consultation
                   <i class="btn__arrow" aria-hidden="true">🡪</i>
                 </a>
                 <button
-                  class="hero__play btn btn-icon-only btn--primary"
+                  class="hero__play btn btn-icon-only btn--primary btn--round"
                   aria-label="Play Our Video"
                 >
                   <svg
@@ -220,9 +220,8 @@
                 Food and Wine Tours
               </h3>
               <p>
-                Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus
-                nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                sit amet rcus nunc.
+                Kit helps you foster deeper connections to build a business with
+                purpose that's profitable and sustainable.
               </p>
             </li>
 
@@ -240,9 +239,8 @@
                 Food and Wine Tours
               </h3>
               <p>
-                Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus
-                nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                sit amet rcus nunc.
+                Kit helps you foster deeper connections to build a business with
+                purpose that's profitable and sustainable.
               </p>
             </li>
 
@@ -260,9 +258,8 @@
                 Food and Wine Tours
               </h3>
               <p>
-                Dolor sit amet, consectetur adipiscing elit. Sed sit amet rcus
-                nun Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                sit amet rcus nunc.
+                Kit helps you foster deeper connections to build a business with
+                purpose that's profitable and sustainable.
               </p>
             </li>
           </ul>
@@ -274,7 +271,7 @@
       </section>
 
       <section class="about">
-        <div class="l-container u-wrapper l-grid">
+        <div class="about__wrapper l-container u-wrapper l-grid">
           <div class="about__content l-flex u-flex-col">
             <div class="about__header">
               <p class="u-section-label l-flex u-flex-ac">
@@ -286,7 +283,7 @@
                 <span>About Us</span>
               </p>
               <h2 class="u-headline-secondary">
-                Where Wanderlust Meets Dream Destinations
+                Nisha used Kit to launch her New York Times bestselling cookbook
               </h2>
             </div>
 
@@ -380,7 +377,7 @@
           </div>
 
           <div class="about__gallery l-grid">
-            <div class="item item-1">
+            <div class="about__item about__item--one">
               <img
                 src="./assets/images/about-3x.jpg"
                 alt=""
@@ -392,14 +389,14 @@
               <h3 class="about__years">25</h3>
               <p>Years of <br />Experience</p>
             </div>
-            <div class="item item-2">
+            <div class="about__item about__item--two">
               <img
                 src="./assets/images/about-badge.png"
                 alt=""
                 class="about__img about__img--two"
               />
             </div>
-            <div class="item item-3">
+            <div class="about__item about__item--three">
               <img
                 src="./assets/images/about-4x.jpg"
                 alt=""
@@ -411,7 +408,7 @@
       </section>
 
       <section class="companies l-container">
-        <div class="u-wrapper l-flex u-flex-col u-flex-md-row">
+        <div class="companies__wrapper u-wrapper l-grid">
           <img
             src="./assets/images/segment.png"
             alt="segment"
@@ -450,9 +447,9 @@
         </div>
       </section>
 
-      <section class="countries l-container">
-        <div class="u-wrapper">
-          <div class="countries__header">
+      <section class="countries">
+        <div class="countries__wrapper l-container u-wrapper">
+          <div class="countries__header l-flex u-flex-col u-flex-jb u-flex-ac">
             <div>
               <p class="u-section-label l-flex u-flex-ac">
                 <img
@@ -462,45 +459,55 @@
                 />
                 <span>Our services</span>
               </p>
-              <h2 class="u-headline-secondary">
-                Adventure Unleashed Discover Your Next
+              <h2 class="countries__headline u-headline-secondary">
+                Your email-first operating system at a glance
               </h2>
-              <div class="countries__slide-controls">
-                <button class="btn btn-icon btn--outline-light">
+              <div
+                class="countries__swiper-controls swiper__controls l-flex u-flex-ac"
+              >
+                <button
+                  class="swiper__btn swiper__btn--left btn btn-icon-only btn--primary btn--round"
+                >
                   <i class="btn__arrow" aria-hidden="true">🡪</i>
                 </button>
-                <button class="btn btn-icon btn--primary">
+                <button
+                  class="swiper__btn swiper__btn--right btn btn-icon-only btn--primary btn--round"
+                >
                   <i class="btn__arrow" aria-hidden="true">🡪</i>
                 </button>
               </div>
             </div>
           </div>
-          <div class="countries__slide">
-            <div class="countries__item item">
+          <div class="swiper countries__swiper">
+            <div class="countries__item swiper__item item">
               <img
                 src="./assets/images/canada.jpg"
                 alt="Canada Ontario"
-                class="countries__img"
+                class="swiper__img"
               />
               <img
                 src="./assets/images/canada-flag.png"
                 alt="Canada flag"
-                class="countries__flag"
+                class="swiper__flag"
+                width="60"
+                height="60"
               />
             </div>
 
-            <div class="countries__item item">
+            <div class="countries__item swiper__item item">
               <img
                 src="./assets/images/russia.jpg"
                 alt="Russia Moscow"
-                class="countries__img"
+                class="swiper__img"
               />
               <img
                 src="./assets/images/russia-flag.png"
                 alt="Russia flag"
-                class="countries__flag"
+                class="swiper__flag"
+                width="60"
+                height="60"
               />
-              <div class="countries__info l-flex u-flex-col">
+              <div class="swiper__info l-flex u-flex-col">
                 <h3 class="u-sub-headline">Working Visa</h3>
                 <p>
                   Lorem Ipsum is simply dummy text the printing and provide best
@@ -513,37 +520,41 @@
               </div>
             </div>
 
-            <div class="countries__item item">
+            <div class="countries__item swiper__item item">
               <img
                 src="./assets/images/countries-brazil.jpg"
                 alt="Brazil Rio de Janeiro"
-                class="countries__img"
+                class="swiper__img"
               />
               <img
                 src="./assets/images/brazil-flag.png"
                 alt="Brazil flag"
-                class="countries__flag"
+                class="swiper__flag"
+                width="60"
+                height="60"
               />
             </div>
 
-            <div class="countries__item item">
+            <div class="countries__item swiper__item item">
               <img
                 src="./assets/images/china.jpg"
                 alt="China Shanghai"
-                class="countries__img"
+                class="swiper__img"
               />
               <img
                 src="./assets/images/china-flag.png"
                 alt="Canada flag"
-                class="countries__flag"
+                class="swiper__flag"
+                width="60"
+                height="60"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="visa l-container">
-        <div class="u-wrapper">
+      <section class="visa">
+        <div class="l-container u-wrapper">
           <div class="visa__header">
             <p class="u-section-label l-flex u-flex-ac">
               <img
@@ -557,8 +568,8 @@
               Seeking Adventure Thrills and Excitement Await
             </h2>
           </div>
-          <ul class="visa__categories">
-            <li class="visa__item l-grid">
+          <ul class="visa__categories l-grid">
+            <li class="visa__item card card--b-dark l-grid">
               <img
                 src="./assets/images/service-5x.jpg"
                 alt="business Visa"
@@ -569,11 +580,11 @@
               <div class="visa__details l-flex u-flex-col">
                 <h3 class="u-sub-headline">Business Visa</h3>
                 <p>
-                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                  quis the venenatis cras sed eu
+                  Kit helps you foster deeper connections to build a business
+                  with purpose that's profitable and sustainable.
                 </p>
-                <div class="visa__footer l-flex u-flex-jb-center">
-                  <button class="btn btn-icon-only btn--outline-success">
+                <div class="visa__footer l-flex u-flex-jc-between u-flex-ac">
+                  <button class="btn btn-icon-only btn--primary btn--round">
                     <i class="btn__arrow" aria-hidden="true">🡥</i>
                   </button>
                   <img
@@ -587,7 +598,7 @@
               </div>
             </li>
 
-            <li class="visa__item l-grid">
+            <li class="visa__item card card--b-dark l-grid">
               <img
                 src="./assets/images/service-2x.jpg"
                 alt="Working visa"
@@ -598,11 +609,11 @@
               <div class="visa__details l-flex u-flex-col">
                 <h3 class="u-sub-headline">Working Visa</h3>
                 <p>
-                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                  quis the venenatis cras sed eu
+                  Kit helps you foster deeper connections to build a business
+                  with purpose that's profitable and sustainable.
                 </p>
-                <div class="visa__footer l-flex u-flex-jb-center">
-                  <button class="btn btn-icon-only btn--outline-success">
+                <div class="visa__footer l-flex u-flex-jc-between u-flex-ac">
+                  <button class="btn btn-icon-only btn--primary btn--round">
                     <i class="btn__arrow" aria-hidden="true">🡥</i>
                   </button>
                   <img
@@ -616,7 +627,7 @@
               </div>
             </li>
 
-            <li class="visa__item l-grid">
+            <li class="visa__item card card--b-dark l-grid">
               <img
                 src="./assets/images/service-3x.jpg"
                 alt="Student Visa"
@@ -627,11 +638,11 @@
               <div class="visa__details l-flex u-flex-col">
                 <h3 class="u-sub-headline">Student Visa</h3>
                 <p>
-                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                  quis the venenatis cras sed eu
+                  Kit helps you foster deeper connections to build a business
+                  with purpose that's profitable and sustainable.
                 </p>
-                <div class="visa__footer l-flex u-flex-jb-center">
-                  <button class="btn btn-icon-only btn--outline-success">
+                <div class="visa__footer l-flex u-flex-jc-between u-flex-ac">
+                  <button class="btn btn-icon-only btn--primary btn--round">
                     <i class="btn__arrow" aria-hidden="true">🡥</i>
                   </button>
                   <img
@@ -645,7 +656,7 @@
               </div>
             </li>
 
-            <li class="visa__item l-grid">
+            <li class="visa__item card card--b-dark l-grid">
               <img
                 src="./assets/images/service-1x.jpg"
                 alt="Student Visa"
@@ -656,11 +667,11 @@
               <div class="visa__details l-flex u-flex-col">
                 <h3 class="u-sub-headline">Tourist Visa</h3>
                 <p>
-                  Et purus duis sollicitudin dignissim habitant. Egestas nulla
-                  quis the venenatis cras sed eu
+                  Kit helps you foster deeper connections to build a business
+                  with purpose that's profitable and sustainable.
                 </p>
-                <div class="visa__footer l-flex u-flex-jb-center">
-                  <button class="btn btn-icon-only btn--outline-success">
+                <div class="visa__footer l-flex u-flex-jc-between u-flex-ac">
+                  <button class="btn btn-icon-only btn--primary btn--round">
                     <i class="btn__arrow" aria-hidden="true">🡥</i>
                   </button>
                   <img

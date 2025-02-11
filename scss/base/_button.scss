@@ -1,27 +1,37 @@
 @use "../base/color" as *;
 @use "../base/variable" as *;
+@use '../abstracts/mixin' as *;
 
 .btn {
   align-items: center;
-  border-radius: $radius-full;
-  display: inline-flex;
+  border-radius: $radius-sm;
+  display: flex;
   font-size: 1.4rem;
   font-weight: 600;
   gap: 1rem;
   justify-content: center;
-  padding: 1.6rem 3rem;
+  line-height: 1.8;
+  padding: $space-x2 $space-x4;
   text-align: center;
   transition: all 0.25s ease-in-out;
 
+  @include breakpoint('tablet') {
+    padding: 1.6rem 3rem;
+  }
+
   &__arrow {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   &-icon-only {
     gap: 0;
-    height: 6rem;
-    width: 6rem;
+    height: 4rem;
     padding: 0;
+    width: 4rem;
+  }
+
+  &--round {
+    border-radius: $radius-full;
   }
 
   &--light {

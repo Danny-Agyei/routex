@@ -1,5 +1,7 @@
 @use "./base/index" as *;
-@use './components/index' as *;
 @use './utilities/index' as *;
 @use "./layout/index" as *;
+@use './components/index' as *;
+@use "./layout/header" as *;
 @use "./pages/home";
+@use "./layout/footer" as *;

@@ -1,12 +1,14 @@
 @use "../abstracts/function" as convert;
 
 // Border radius
-$radius-sm: convert.toRem(20);
+$radius-sm: convert.toRem(8);
+$radius-md: convert.toRem(20);
 $radius-lg: convert.toRem(50);
 $radius-full: convert.toRem(999);
 
 // Spacing
 $space-x30: convert.toRem(120);
+$space-x25: convert.toRem(100);
 $space-x20: convert.toRem(80);
 $space-x16: convert.toRem(64);
 $space-x13: convert.toRem(52);
