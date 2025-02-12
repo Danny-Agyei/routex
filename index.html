@@ -914,7 +914,7 @@
                   aria-controls="accordion-panel-2"
                 >
                   <span class="accordion__headline"
-                    >How long does for a single project?</span
+                    >How long does it take?</span
                   >
                   <span class="accordion__icon btn btn-icon-only btn--round">
                     <svg
@@ -989,9 +989,9 @@
       </section>
     </main>
 
-    <footer class="footer l-container">
-      <div class="l-grid footer__wrapper">
-        <div>
+    <footer class="footer">
+      <div class="l-container l-grid footer__wrapper u-wrapper">
+        <div class="footer__section">
           <img
             src="./assets/images/footer-logo.png"
             alt="Routex Home"
@@ -1000,10 +1000,11 @@
             height="40"
           />
           <p class="footer__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Leverage agile frameworks to provide a robust syns is for strategy
+            foster Leverage agile.
           </p>
           <nav class="footer__social l-flex u-flex-ac" aria-label="Social">
-            <a href="#">
+            <a href="#" class="footer__social__links">
               <img
                 src="./assets/images/facebook.svg"
                 alt="Routex Facebook Home"
@@ -1012,7 +1013,7 @@
                 height="20"
               />
             </a>
-            <a href="#">
+            <a href="#" class="footer__social__links">
               <img
                 src="./assets/images/instagram.svg"
                 alt="Routex Instagram Home"
@@ -1021,7 +1022,7 @@
                 height="20"
               />
             </a>
-            <a href="#">
+            <a href="#" class="footer__social__links">
               <img
                 src="./assets/images/x.svg"
                 alt="Routex X Home"
@@ -1030,7 +1031,7 @@
                 height="20"
               />
             </a>
-            <a href="#">
+            <a href="#" class="footer__social__links">
               <img
                 src="./assets/images/linkedin.svg"
                 alt="Routex Linkedin Home"
@@ -1042,11 +1043,13 @@
           </nav>
         </div>
 
-        <div>
-          <h2 id="services" class="u-sub-headline">Services</h2>
+        <div class="footer__section">
+          <h2 id="services" class="footer__headline u-sub-headline">
+            Services
+          </h2>
           <section class="footer__nav" aria-labelledby="services">
             <ul class="footer__list">
-              <li class="footer__item l-flex u-flex-col">
+              <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
                     src="./assets/images/check-mark.svg"
@@ -1059,7 +1062,7 @@
                 </a>
               </li>
 
-              <li class="footer__item l-flex u-flex-col">
+              <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
                     src="./assets/images/check-mark.svg"
@@ -1072,7 +1075,7 @@
                 </a>
               </li>
 
-              <li class="footer__item l-flex u-flex-col">
+              <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
                     src="./assets/images/check-mark.svg"
@@ -1085,7 +1088,7 @@
                 </a>
               </li>
 
-              <li class="footer__item l-flex u-flex-col">
+              <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
                     src="./assets/images/check-mark.svg"
@@ -1101,11 +1104,13 @@
           </section>
         </div>
 
-        <div>
-          <h2 id="about-us" class="u-sub-headline">About Us</h2>
+        <div class="footer__section">
+          <h2 id="about-us" class="footer__headline u-sub-headline">
+            About Us
+          </h2>
           <section class="footer__nav" aria-labelledby="about-us">
             <ul class="footer__list">
-              <li class="footer__item l-flex u-flex-col">
+              <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
                     src="./assets/images/check-mark.svg"
@@ -1118,7 +1123,7 @@
                 </a>
               </li>
 
-              <li class="footer__item l-flex u-flex-col">
+              <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
                     src="./assets/images/check-mark.svg"
@@ -1131,7 +1136,7 @@
                 </a>
               </li>
 
-              <li class="footer__item l-flex u-flex-col">
+              <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
                     src="./assets/images/check-mark.svg"
@@ -1144,7 +1149,7 @@
                 </a>
               </li>
 
-              <li class="footer__item l-flex u-flex-col">
+              <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
                     src="./assets/images/check-mark.svg"
@@ -1160,8 +1165,10 @@
           </section>
         </div>
 
-        <div class="footer__newsletter">
-          <h2 class="u-sub-headline">Subscribe Our Newsletter</h2>
+        <div class="footer__section footer__newsletter">
+          <h2 class="footer__headline u-sub-headline">
+            Subscribe Our Newsletter
+          </h2>
           <p class="footer__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
@@ -1174,10 +1181,22 @@
                 S
               />
               <button
-                class="testimonials__btn btn btn-icon-only btn--primary"
+                class="form__group__btn btn btn-icon-only btn--round btn--primary"
                 aria-label="subscribe to newsletter"
               >
-                <i class="btn__arrow" aria-hidden="true">🡪</i>
+                <svg
+                  aria-hidden="true"
+                  width="16"
+                  height="15"
+                  viewBox="0 0 16 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.9727 1.80469L13.2227 13.1523C13.1953 13.4258 13.0312 13.6719 12.7852 13.8086C12.6484 13.8633 12.5117 13.918 12.3477 13.918C12.2383 13.918 12.1289 13.8906 12.0195 13.8359L8.68359 12.4414L7.28906 14.5195C7.17969 14.7109 6.98828 14.793 6.79688 14.793C6.49609 14.793 6.25 14.5469 6.25 14.2461V11.6211C6.25 11.4023 6.30469 11.2109 6.41406 11.0742L12.375 3.41797L4.33594 10.6641L1.51953 9.48828C1.21875 9.35156 1 9.07812 1 8.72266C0.972656 8.33984 1.13672 8.06641 1.4375 7.90234L13.6875 0.929688C13.9609 0.765625 14.3438 0.765625 14.6172 0.957031C14.8906 1.14844 15.0273 1.47656 14.9727 1.80469Z"
+                    fill="none"
+                  />
+                </svg>
               </button>
             </div>
           </form>

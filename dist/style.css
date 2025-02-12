@@ -474,6 +474,10 @@ h2 {
   color: hsl(162, 92%, 15%);
   font-weight: 700;
 }
+.accordion__btn {
+  text-align: left;
+  gap: 1.2rem;
+}
 .accordion__btn[aria-expanded=true] .accordion__icon {
   transform: rotate(-90deg);
   border-color: hsl(86, 73%, 46%);
@@ -496,6 +500,38 @@ h2 {
 }
 .accordion__panel {
   padding-block-start: 0.8rem;
+}
+
+.form__input {
+  border: none;
+  height: 100%;
+  outline: none;
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+}
+.form__input::placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.form__group {
+  position: relative;
+  height: 5rem;
+  background-color: hsl(225, 9%, 9%);
+  border-radius: 99.9rem;
+  padding-inline-start: 1.6rem;
+}
+.form__group__btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 5rem;
+  width: 5rem;
+}
+.form__group__btn:hover {
+  background-color: hsl(86, 73%, 46%);
+  opacity: 0.9;
+}
+.form__group__btn svg {
+  fill: hsl(0, 0%, 100%);
 }
 
 .header {
@@ -919,6 +955,66 @@ h2 {
 }
 .faq__header {
   margin-block-end: 4rem;
+}
+
+.footer {
+  background-color: hsl(162, 92%, 15%);
+  background-image: url("/assets/images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: hsl(0, 0%, 100%);
+}
+.footer__wrapper {
+  gap: 5.2rem;
+}
+.footer__section {
+  grid-column: 1/-1;
+}
+.footer__logo {
+  width: 18rem;
+}
+.footer__text {
+  margin-block: 2.4rem 2rem;
+}
+.footer__social {
+  gap: 1.2rem;
+}
+.footer__social__links {
+  background-color: transparent;
+  border-radius: 99.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  transition: background 0.3s ease-in-out;
+}
+.footer__social__links:hover {
+  background-color: hsl(86, 73%, 46%);
+}
+.footer__brands {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.footer__headline {
+  color: hsl(0, 0%, 100%);
+  margin-block-end: 2.4rem;
+}
+.footer__item:not(:last-child) {
+  margin-block-end: 0.8rem;
+}
+.footer__link {
+  width: max-content;
+}
+.footer__link:hover {
+  color: hsl(86, 73%, 46%);
+  opacity: 0.8;
+}
+.footer__icon {
+  height: 1.5rem;
+  margin-inline-end: 0.8rem;
+  width: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

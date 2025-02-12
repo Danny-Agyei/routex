@@ -14,6 +14,9 @@
 
 
     &__btn {
+        text-align: left;
+        gap: $space-x3;
+
         &[aria-expanded='true'] {
 
             .accordion__icon {

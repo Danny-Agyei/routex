@@ -1,0 +1,41 @@
+@use '../base/variable' as *;
+@use '../base/color' as *;
+
+.form {
+    &__input {
+        border: none;
+        height: 100%;
+        outline: none;
+        width: 100%;
+        color: $color-neutral-100;
+
+        &::placeholder {
+            color: $color-neutral-100;
+        }
+    }
+
+    &__group {
+        position: relative;
+        height: 5rem;
+        background-color: $color-neutral-900;
+        border-radius: $radius-full;
+        padding-inline-start: $space-x4;
+
+        &__btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 5rem;
+            width: 5rem;
+
+            &:hover {
+                background-color: $color-primary-500;
+                opacity: 0.9;
+            }
+
+            svg {
+                fill: $color-neutral-100;
+            }
+        }
+    }
+}
