@@ -472,6 +472,7 @@ h2 {
 }
 .accordion__headline {
   color: hsl(162, 92%, 15%);
+  font-weight: 700;
 }
 .accordion__btn[aria-expanded=true] .accordion__icon {
   transform: rotate(-90deg);
