@@ -1,0 +1,52 @@
+@use '../base/variable' as *;
+@use '../base/color' as *;
+
+.accordion {
+
+    &__item:nth-child(2) {
+        margin-block: $space-x5;
+    }
+
+    &__headline {
+        color: $color-primary-900;
+    }
+
+
+    &__btn {
+        &[aria-expanded='true'] {
+
+            .accordion__icon {
+                transform: rotate(-90deg);
+                border-color: $color-primary-500;
+                background-color: $color-primary-500;
+
+                svg {
+                    fill: $color-neutral-100;
+                }
+            }
+        }
+
+        &:hover {
+            .accordion__icon {
+                background-color: $color-primary-900;
+
+                svg {
+                    fill: $color-neutral-100;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        border: 1px solid $color-primary-900;
+
+        svg {
+            fill: $color-primary-900
+        }
+    }
+
+    &__panel {
+        padding-block-start: $space-x2;
+    }
+
+}

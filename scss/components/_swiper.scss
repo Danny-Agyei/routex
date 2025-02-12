@@ -1,41 +1,56 @@
 @use '../base/variable' as *;
 @use '../base/color' as *;
+@use "../abstracts/mixin" as *;
 
 .swiper {
-    &__controls {
+    // &-wrapper {
+    //     -webkit-transition-timing-function: ease !important;
+    //     -o-transition-timing-function: ease !important;
+    //     transition-timing-function: ease !important;
+    // }
+
+    &-controls {
         justify-content: space-between;
         left: 0;
         position: absolute;
-        top: 50%;
+        top: calc(50% + 6rem);
         transform: translateY(-50%);
         z-index: 996;
-    }
 
-    &__btn {
-        &:hover {
-            background-color: $color-neutral-100;
-            color: $color-primary-900;
-        }
-
-        &--right {
-            transform: translateX(1.5rem);
-        }
-
-        &--left {
-            transform: translateX(-1.5rem);
+        // Testimonials swiper controls
+        &-test {
+            bottom: 1.4rem;
+            position: absolute;
+            right: $space-x5;
+            width: max-content;
         }
     }
 
-    &__item {
-        max-width: 36rem;
-        max-height: 40rem;
+    &-button::after {
+        display: none;
+    }
+
+
+    &-slide {
+        border-radius: $radius-md;
+        height: 38rem;
         object-fit: cover;
+        overflow: hidden;
         position: relative;
+        user-select: none;
+        max-width: 32rem;
 
+        @include breakpoint('tablet') {
+            height: 42rem;
+            width: 24rem !important;
+
+            &-russia {
+                width: 34rem !important;
+            }
+        }
 
         &::after {
             background-color: hsla(240, 100%, 5%, 0.392);
-            border-radius: $radius-md;
             content: "";
             height: 100%;
             left: 0;
@@ -46,60 +61,32 @@
         }
     }
 
-    &__img {
-        border-radius: $radius-md;
-        height: 100%;
+    &-img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    &__flag {
+    &-flag {
+        height: 4.5rem;
         position: absolute;
         right: $space-x5;
         top: $space-x5;
+        width: 4.5rem;
         z-index: 5;
     }
 
-    &__info {
+    &-info {
         background-color: $color-primary-500;
+        border-radius: $radius-md;
+        bottom: $space-x5;
         color: $color-neutral-100;
-        border-radius: $radius-md;
+        gap: $space-x4;
+        left: 50%;
         padding: $space-x5;
-        z-index: 999;
-        gap: $space-x4;
-        width: 10rem;
         position: absolute;
-        bottom: $space-x10;
-        left: 0;
-    }
-}
-
-// Visa Category
-.visa {
-    background-color: $color-neutral-100;
-
-    &__header {
-        margin-block-end: $space-x10;
-    }
-
-    &__categories {
-        gap: $space-x8;
-    }
-
-    &__item {
-        gap: $space-x6;
-        grid-column: 1 / -1;
-        grid-template-columns: 1fr;
-    }
-
-    &__img {
-        border-radius: $radius-md;
-        height: 20rem;
-        object-fit: cover;
-        object-position: top;
-        width: 100%;
-    }
-
-    &__details {
-        gap: $space-x4;
+        transform: translateX(-50%);
+        width: calc(100% - 4rem);
+        z-index: 966;
     }
 }

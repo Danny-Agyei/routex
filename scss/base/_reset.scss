@@ -163,6 +163,10 @@ img {
   max-width: 100%;
 }
 
+svg path {
+  fill: inherit;
+}
+
 input {
   background-color: transparent;
   border: none;
@@ -184,7 +188,7 @@ h4,
 h5 {
   font-size: inherit;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.15;
   color: $color-primary-900;
 }
 

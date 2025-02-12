@@ -68,7 +68,7 @@
         background-image: url('../../assets/images/hero-img-bg.png');
         background-repeat: no-repeat;
         background-position: center bottom;
-        background-size: contain;
+        background-size: 100%;
         grid-column: 1 / -1;
     }
 
@@ -261,18 +261,165 @@
 .countries {
     background-color: $color-primary-900;
 
+
     &__wrapper {
         position: relative;
     }
 
     &__header {
         margin-block-end: $space-x10;
+
+        svg {
+            fill: $color-neutral-100;
+        }
+    }
+
+    &__label {
+        color: $color-primary-500;
     }
 
     &__headline {
         color: $color-neutral-100;
     }
 
-    &__slide-controls {}
+    &__btn {
+        border: 1px solid $color-neutral-100;
 
+        &:hover {
+            background-color: $color-neutral-100;
+            color: $color-primary-900;
+
+            svg {
+                fill: $color-primary-900;
+            }
+        }
+
+
+        svg {
+            width: auto;
+            height: auto;
+            fill: $color-neutral-100;
+        }
+
+        &--next {
+            transform: translateX(1.5rem);
+        }
+
+        &--prev {
+            transform: translateX(-1.5rem);
+        }
+    }
+
+
+}
+
+
+// Visa Category
+.visa {
+    background-color: $color-neutral-100;
+
+    &__header {
+        margin-block-end: $space-x10;
+    }
+
+    &__categories {
+        gap: $space-x8;
+    }
+
+    &__item {
+        gap: $space-x6;
+        grid-column: 1 / -1;
+        grid-template-columns: 1fr;
+    }
+
+    &__img {
+        border-radius: $radius-md;
+        width: 100%;
+    }
+
+    &__details {
+        gap: $space-x4;
+    }
+}
+
+// Testimonials 
+.testimonials {
+    &__header {
+        margin-block-end: $space-x10;
+    }
+
+    &__img {
+        display: none;
+    }
+
+    &__swiper {
+        background-color: $color-primary-500;
+        border-radius: $radius-md;
+        color: $color-neutral-100;
+        grid-column: 1/ -1;
+        padding: $space-x5;
+        padding-block-end: $space-x16;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 55%;
+            height: 1px;
+            background-color: $color-neutral-100;
+            position: absolute;
+            bottom: $space-x8;
+            left: $space-x5;
+        }
+    }
+
+    &__description {
+        margin-block: $space-x5 $space-x8;
+    }
+
+    &__btn {
+        background-color: $color-neutral-100;
+        position: static;
+
+        &:hover {
+            background-color: $color-primary-900;
+            color: $color-primary-900;
+
+            svg {
+                fill: $color-neutral-100;
+            }
+        }
+
+
+        svg {
+            width: auto;
+            height: auto;
+            fill: $color-primary-900;
+        }
+
+        &--prev {
+            margin-inline-end: $space-x4;
+        }
+    }
+
+    &__icon {
+        height: 3rem;
+        width: 3rem;
+    }
+
+    &__avatar {
+        border-radius: $radius-full;
+        height: 4.5rem;
+        margin-inline-end: $space-x3;
+        object-fit: cover;
+        width: 4.5rem;
+    }
+}
+
+// Faq 
+.faq {
+    background-color: $color-neutral-100;
+
+    &__header {
+        margin-block-end: $space-x10;
+    }
 }
