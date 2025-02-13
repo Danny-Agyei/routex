@@ -74,89 +74,93 @@
   </head>
 
   <body>
-    <header class="header l-container">
-      <a href="/" class="header__logo-wrapper">
-        <img
-          src="./assets/images/logo.png"
-          alt="Routex Home"
-          class="header__logo"
-          width="157"
-          height="40"
-        />
-      </a>
+    <header class="header">
+      <div class="header__wrapper l-container">
+        <a href="/" class="header__logo-wrapper">
+          <img
+            src="./assets/images/logo.png"
+            alt="Routex Home"
+            class="header__logo"
+            width="157"
+            height="40"
+          />
+        </a>
 
-      <nav id="nav-main" class="header__nav nav" aria-label="Main">
-        <div class="nav__overlay" hidden></div>
-        <div class="nav__wrapper">
-          <ul class="nav__list l-flex u-flex-col">
-            <li>
-              <a href="/home" class="nav__link" aria-current="page">Home</a>
-            </li>
-            <li><a href="/about" class="nav__link">About us</a></li>
-            <li><a href="/service" class="nav__link">Services</a></li>
-            <li><a href="/pricing" class="nav__link">Pricing</a></li>
-            <li><a href="/blog" class="nav__link">Blog</a></li>
-            <li><a href="/contact" class="nav__link">Contact</a></li>
-          </ul>
+        <nav id="nav-main" class="header__nav nav" aria-label="Main">
+          <div class="nav__overlay js-nav-overlay" hidden></div>
+          <div class="nav__wrapper js-nav-wrapper">
+            <ul class="nav__list l-flex u-flex-col">
+              <li>
+                <a href="/home" class="nav__link" aria-current="page">Home</a>
+              </li>
+              <li><a href="/about" class="nav__link">About us</a></li>
+              <li><a href="/service" class="nav__link">Services</a></li>
+              <li><a href="/pricing" class="nav__link">Pricing</a></li>
+              <li><a href="/blog" class="nav__link">Blog</a></li>
+              <li><a href="/contact" class="nav__link">Contact</a></li>
+            </ul>
 
-          <!-- Close Button -->
+            <!-- Close Button -->
+            <button
+              class="js-nav-toggle btn nav__toggle nav__toggle--close"
+              aria-label="Close Main Navigation"
+              aria-controls="nav-main"
+              aria-expanded="true"
+              data-toggle-type="close"
+            >
+              <svg
+                viewBox="0 0 32 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <rect
+                  id="Rectangle"
+                  x="2.91846"
+                  y="0.297211"
+                  width="40"
+                  height="3"
+                  transform="rotate(45 2.91846 0.297211)"
+                  fill="#151619"
+                ></rect>
+                <rect
+                  id="Rectangle_2"
+                  x="0.797363"
+                  y="28.5815"
+                  width="40"
+                  height="3"
+                  transform="rotate(-45 0.797363 28.5815)"
+                  fill="#151619"
+                ></rect>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Open Button -->
           <button
-            class="btn nav__toggle nav__toggle--close"
-            aria-label="Close Main Navigation"
+            class="js-nav-toggle btn nav__toggle nav__toggle--open"
+            aria-label="Open Main Navigation"
             aria-controls="nav-main"
-            aria-expanded="true"
+            aria-expanded="false"
+            data-toggle-type="open"
           >
             <svg
-              viewBox="0 0 32 31"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
             >
-              <rect
-                id="Rectangle"
-                x="2.91846"
-                y="0.297211"
-                width="40"
-                height="3"
-                transform="rotate(45 2.91846 0.297211)"
-                fill="#151619"
-              ></rect>
-              <rect
-                id="Rectangle_2"
-                x="0.797363"
-                y="28.5815"
-                width="40"
-                height="3"
-                transform="rotate(-45 0.797363 28.5815)"
-                fill="#151619"
-              ></rect>
+              <path
+                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+              />
             </svg>
           </button>
-        </div>
+        </nav>
 
-        <!-- Open Button -->
-        <button
-          class="btn nav__toggle nav__toggle--open"
-          aria-label="Open Main Navigation"
-          aria-controls="nav-main"
-          aria-expanded="false"
-        >
-          <svg
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-          >
-            <path
-              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-            />
-          </svg>
-        </button>
-      </nav>
-
-      <a href="#" class="btn btn--primary header__btn">
-        Book a Call
-        <i class="btn__arrow" aria-hidden="true">🡪</i>
-      </a>
+        <a href="#" class="btn btn--primary header__btn">
+          Book a Call
+          <i class="btn__arrow" aria-hidden="true">🡪</i>
+        </a>
+      </div>
     </header>
 
     <main>
@@ -308,9 +312,7 @@
             </p>
 
             <div class="about__work">
-              <div
-                class="about__card card card--md card--b-dark l-flex u-flex-col"
-              >
+              <div class="about__card card card--b-dark l-flex u-flex-col">
                 <div class="about__card-header l-flex u-flex-ac">
                   <img
                     src="./assets/images/passport-plus.png"
@@ -399,7 +401,7 @@
               />
             </div>
 
-            <div class="about__experience card card--md l-flex u-flex-center">
+            <div class="about__experience card l-flex u-flex-center">
               <h3 class="about__years">25</h3>
               <p>Years of <br />Experience</p>
             </div>
@@ -539,37 +541,39 @@
               </div>
             </div>
           </div>
-          <div class="swiper countries__swiper">
+          <div class="swiper countries__swiper" data-name="countries">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <div class="swiper-slide countries__slide">
                 <img
                   src="./assets/images/canada.jpg"
                   alt="Canada Ontario"
-                  class="swiper-img"
+                  class="countries__img"
                 />
                 <img
                   src="./assets/images/canada-flag.png"
                   alt="Canada flag"
-                  class="swiper-flag"
+                  class="countries__flag"
                   width="60"
                   height="60"
                 />
               </div>
 
-              <div class="swiper-slide swiper-slide-russia">
+              <div
+                class="swiper-slide countries__slide countries__slide--russia"
+              >
                 <img
                   src="./assets/images/russia.jpg"
                   alt="Russia Moscow"
-                  class="swiper-img"
+                  class="countries__img"
                 />
                 <img
                   src="./assets/images/russia-flag.png"
                   alt="Russia flag"
-                  class="swiper-flag"
+                  class="countries__flag"
                   width="60"
                   height="60"
                 />
-                <div class="swiper-info l-flex u-flex-col">
+                <div class="countries__info l-flex u-flex-col">
                   <h3 class="u-sub-headline">Working Visa</h3>
                   <p>
                     Lorem Ipsum is simply dummy text the printing and provide
@@ -582,31 +586,31 @@
                 </div>
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide countries__slide">
                 <img
                   src="./assets/images/countries-brazil.jpg"
                   alt="Brazil Rio de Janeiro"
-                  class="swiper-img"
+                  class="countries__img"
                 />
                 <img
                   src="./assets/images/brazil-flag.png"
                   alt="Brazil flag"
-                  class="swiper-flag"
+                  class="countries__flag"
                   width="60"
                   height="60"
                 />
               </div>
 
-              <div class="swiper-slide">
+              <div class="swiper-slide countries__slide">
                 <img
                   src="./assets/images/china.jpg"
                   alt="China Shanghai"
-                  class="swiper-img"
+                  class="countries__img"
                 />
                 <img
                   src="./assets/images/china-flag.png"
                   alt="Canada flag"
-                  class="swiper-flag"
+                  class="countries__flag"
                   width="60"
                   height="60"
                 />
@@ -775,36 +779,65 @@
               width="500"
               height="480"
             />
-            <div class="testimonials__swiper">
-              <div class="testimonials__item item l-flex u-flex-col">
-                <img
-                  src="./assets/images/quotes.png"
-                  alt=""
-                  class="testimonials__icon"
-                  width="35"
-                  height="35"
-                />
-                <p class="testimonials__description">
-                  Leverage agile frameworks to provide a robust syns is for
-                  strategy foster Leverage agile frameworks to provide a robust
-                  synopsis for go for strategy foster
-                </p>
-
-                <div class="l-flex u-flex-ac">
+            <div class="testimonials__swiper swiper" data-name="testimonials">
+              <div class="swiper-wrapper">
+                <div class="testimonials__slide swiper-slide l-flex u-flex-col">
                   <img
-                    src="./assets/images/service-1x.jpg"
-                    alt="Eleanor Pena"
-                    class="testimonials__avatar"
-                    width="50"
-                    height="50"
+                    src="./assets/images/quotes.png"
+                    alt=""
+                    class="testimonials__icon"
+                    width="35"
+                    height="35"
                   />
-                  <div class="l-flex u-flex-col">
-                    <h3 class="testimonials__name">Eleanor Pena</h3>
-                    <p>President of Sales</p>
+                  <p class="testimonials__description">
+                    Leverage agile frameworks to provide a robust syns is for
+                    strategy foster Leverage agile frameworks to provide a
+                    robust synopsis for go for strategy foster
+                  </p>
+
+                  <div class="l-flex u-flex-ac">
+                    <img
+                      src="./assets/images/service-1x.jpg"
+                      alt="Eleanor Pena"
+                      class="testimonials__avatar"
+                      width="50"
+                      height="50"
+                    />
+                    <div class="l-flex u-flex-col">
+                      <h3 class="testimonials__name">John Doe</h3>
+                      <p class="testimonials__role">Web Designer</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonials__slide swiper-slide l-flex u-flex-col">
+                  <img
+                    src="./assets/images/quotes.png"
+                    alt=""
+                    class="testimonials__icon"
+                    width="35"
+                    height="35"
+                  />
+                  <p class="testimonials__description">
+                    Leverage agile frameworks to provide a robust syns is for
+                    strategy foster Leverage agile frameworks to provide a
+                    robust synopsis for go for strategy foster
+                  </p>
+
+                  <div class="l-flex u-flex-ac">
+                    <img
+                      src="./assets/images/service-2x.jpg"
+                      alt="Eleanor Pena"
+                      class="testimonials__avatar"
+                      width="50"
+                      height="50"
+                    />
+                    <div class="l-flex u-flex-col">
+                      <h3 class="testimonials__name">Eleanor Pena</h3>
+                      <p class="testimonials__role">President of Sales</p>
+                    </div>
                   </div>
                 </div>
               </div>
-
               <div class="swiper-controls-test l-flex u-flex-ac">
                 <button
                   class="swiper-button swiper-button-prev testimonials__btn testimonials__btn--prev btn btn-icon-only btn--round"
@@ -991,7 +1024,7 @@
 
     <footer class="footer">
       <div class="l-container l-grid footer__wrapper u-wrapper">
-        <div class="footer__section">
+        <div class="footer__company">
           <img
             src="./assets/images/footer-logo.png"
             alt="Routex Home"
@@ -1043,7 +1076,7 @@
           </nav>
         </div>
 
-        <div class="footer__section">
+        <div class="footer__services">
           <h2 id="services" class="footer__headline u-sub-headline">
             Services
           </h2>
@@ -1104,7 +1137,7 @@
           </section>
         </div>
 
-        <div class="footer__section">
+        <div class="footer__about">
           <h2 id="about-us" class="footer__headline u-sub-headline">
             About Us
           </h2>
@@ -1165,7 +1198,7 @@
           </section>
         </div>
 
-        <div class="footer__section footer__newsletter">
+        <div class="footer__newsletter">
           <h2 class="footer__headline u-sub-headline">
             Subscribe Our Newsletter
           </h2>

@@ -1,15 +1,18 @@
 @use "../abstracts/function" as convert;
 
 .u-headline-primary {
-  font-size: convert.toRem(64);
-  font-size: clamp(convert.toRem(64), 1.65rem + 3.525vw, convert.toRem(80));
+  font-size: convert.toRem(36);
+  font-size: clamp(convert.toRem(36), 2.3rem + 5.789644012945vw, 8rem)
 }
 
 .u-headline-secondary {
+  // font-size: convert.toRem(30);
+  // font-size: clamp(convert.toRem(30),
+  //     1.6055825242718447rem + 1.6828478964401297vw,
+  //     convert.toRem(50));
   font-size: convert.toRem(30);
-  font-size: clamp(convert.toRem(30),
-      1.6055825242718447rem + 1.6828478964401297vw,
-      convert.toRem(50));
+  font-size: clamp(convert.toRem(30), 2rem + 2.2944983818770228vw, 5rem);
+  max-width: 60rem;
 }
 
 .u-sub-headline {

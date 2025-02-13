@@ -7,6 +7,10 @@
     max-width: min(100% - $space-x10, convert.toRem(540));
     margin-inline: auto;
 
+    // @include breakpoint("mobile") {
+    //     max-width: convert.toRem(540);
+    // }
+
     @include breakpoint("tablet") {
         max-width: convert.toRem(720);
     }
