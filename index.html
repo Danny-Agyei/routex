@@ -76,18 +76,19 @@
   <body>
     <header class="header">
       <div class="header__wrapper l-container">
-        <a href="/" class="header__logo-wrapper">
-          <img
-            src="./assets/images/logo.png"
-            alt="Routex Home"
-            class="header__logo"
-            width="157"
-            height="40"
-          />
-        </a>
-
+        <div class="header__logo-wrapper">
+          <a href="/">
+            <img
+              src="./assets/images/logo.png"
+              alt="Routex Home"
+              class="header__logo"
+              width="157"
+              height="40"
+            />
+          </a>
+        </div>
         <nav id="nav-main" class="header__nav nav" aria-label="Main">
-          <div class="nav__overlay js-nav-overlay" hidden></div>
+          <div class="nav__overlay js-nav-overlay"></div>
           <div class="nav__wrapper js-nav-wrapper">
             <ul class="nav__list l-flex u-flex-col">
               <li>
@@ -197,7 +198,7 @@
             </div>
             <div class="hero__banner">
               <img
-                src="./assets/images/about-1x.png"
+                src="./assets/images/hero-1x.png"
                 alt="Man with pink luggage waving and smiling"
                 class="hero__img"
                 width="300"
@@ -385,7 +386,7 @@
                   height="45"
                 />
                 <div>
-                  <p class="about__text">Need help?</p>
+                  <p>Need help?</p>
                   <a href="tel:(808)555-0111">(808)555-0111</a>
                 </div>
               </div>
@@ -501,44 +502,44 @@
               <h2 class="countries__headline u-headline-secondary">
                 New AI Feature Drop: Aria AI gets improved Writing Mode
               </h2>
-              <div class="swiper-controls l-flex u-flex-ac">
-                <button
-                  class="swiper-button swiper-button-prev countries__btn countries__btn--prev btn btn-icon-only btn--primary btn--round"
+            </div>
+            <div class="swiper-controls l-flex u-flex-ac">
+              <button
+                class="swiper-button swiper-button-prev countries__btn countries__btn--prev btn btn-icon-only btn--primary btn--round"
+              >
+                <svg
+                  class="btn__arrow"
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  aria-hidden="true"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    class="btn__arrow"
-                    width="15"
-                    height="14"
-                    viewBox="0 0 15 14"
-                    aria-hidden="true"
+                  <path
+                    d="M14.9688 7.03906C14.9688 7.60156 14.5312 8.03906 14 8.03906H4.40625L7.6875 11.3516C8.09375 11.7266 8.09375 12.3828 7.6875 12.7578C7.5 12.9453 7.25 13.0391 7 13.0391C6.71875 13.0391 6.46875 12.9453 6.28125 12.7578L1.28125 7.75781C0.875 7.38281 0.875 6.72656 1.28125 6.35156L6.28125 1.35156C6.65625 0.945312 7.3125 0.945312 7.6875 1.35156C8.09375 1.72656 8.09375 2.38281 7.6875 2.75781L4.40625 6.03906H14C14.5312 6.03906 14.9688 6.50781 14.9688 7.03906Z"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M14.9688 7.03906C14.9688 7.60156 14.5312 8.03906 14 8.03906H4.40625L7.6875 11.3516C8.09375 11.7266 8.09375 12.3828 7.6875 12.7578C7.5 12.9453 7.25 13.0391 7 13.0391C6.71875 13.0391 6.46875 12.9453 6.28125 12.7578L1.28125 7.75781C0.875 7.38281 0.875 6.72656 1.28125 6.35156L6.28125 1.35156C6.65625 0.945312 7.3125 0.945312 7.6875 1.35156C8.09375 1.72656 8.09375 2.38281 7.6875 2.75781L4.40625 6.03906H14C14.5312 6.03906 14.9688 6.50781 14.9688 7.03906Z"
-                      fill="none"
-                    />
-                  </svg>
-                </button>
-                <button
-                  class="swiper-button swiper-button-next countries__btn countries__btn--next btn btn-icon-only btn--primary btn--round"
+                  />
+                </svg>
+              </button>
+              <button
+                class="swiper-button swiper-button-next countries__btn countries__btn--next btn btn-icon-only btn--primary btn--round"
+              >
+                <svg
+                  class="btn__arrow"
+                  aria-hidden="true"
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    class="btn__arrow"
-                    aria-hidden="true"
-                    width="15"
-                    height="14"
-                    viewBox="0 0 15 14"
+                  <path
+                    d="M13.6875 7.75781L8.6875 12.7578C8.5 12.9453 8.25 13.0391 8 13.0391C7.71875 13.0391 7.46875 12.9453 7.28125 12.7578C6.875 12.3828 6.875 11.7266 7.28125 11.3516L10.5625 8.03906H1C0.4375 8.03906 0 7.60156 0 7.03906C0 6.50781 0.4375 6.03906 1 6.03906H10.5625L7.28125 2.75781C6.875 2.38281 6.875 1.72656 7.28125 1.35156C7.65625 0.945312 8.3125 0.945312 8.6875 1.35156L13.6875 6.35156C14.0938 6.72656 14.0938 7.38281 13.6875 7.75781Z"
                     fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13.6875 7.75781L8.6875 12.7578C8.5 12.9453 8.25 13.0391 8 13.0391C7.71875 13.0391 7.46875 12.9453 7.28125 12.7578C6.875 12.3828 6.875 11.7266 7.28125 11.3516L10.5625 8.03906H1C0.4375 8.03906 0 7.60156 0 7.03906C0 6.50781 0.4375 6.03906 1 6.03906H10.5625L7.28125 2.75781C6.875 2.38281 6.875 1.72656 7.28125 1.35156C7.65625 0.945312 8.3125 0.945312 8.6875 1.35156L13.6875 6.35156C14.0938 6.72656 14.0938 7.38281 13.6875 7.75781Z"
-                      fill="none"
-                    />
-                  </svg>
-                </button>
-              </div>
+                  />
+                </svg>
+              </button>
             </div>
           </div>
           <div class="swiper countries__swiper" data-name="countries">
@@ -579,7 +580,79 @@
                     Lorem Ipsum is simply dummy text the printing and provide
                     best visa ever
                   </p>
-                  <button class="btn btn--outline-light">
+                  <button class="btn btn--primary">
+                    Apply Now
+                    <i aria-hidden="true">🡪</i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="swiper-slide countries__slide">
+                <img
+                  src="./assets/images/countries-brazil.jpg"
+                  alt="Brazil Rio de Janeiro"
+                  class="countries__img"
+                />
+                <img
+                  src="./assets/images/brazil-flag.png"
+                  alt="Brazil flag"
+                  class="countries__flag"
+                  width="60"
+                  height="60"
+                />
+              </div>
+
+              <div class="swiper-slide countries__slide">
+                <img
+                  src="./assets/images/china.jpg"
+                  alt="China Shanghai"
+                  class="countries__img"
+                />
+                <img
+                  src="./assets/images/china-flag.png"
+                  alt="Canada flag"
+                  class="countries__flag"
+                  width="60"
+                  height="60"
+                />
+              </div>
+              <div class="swiper-slide countries__slide">
+                <img
+                  src="./assets/images/canada.jpg"
+                  alt="Canada Ontario"
+                  class="countries__img"
+                />
+                <img
+                  src="./assets/images/canada-flag.png"
+                  alt="Canada flag"
+                  class="countries__flag"
+                  width="60"
+                  height="60"
+                />
+              </div>
+
+              <div
+                class="swiper-slide countries__slide countries__slide--russia"
+              >
+                <img
+                  src="./assets/images/russia.jpg"
+                  alt="Russia Moscow"
+                  class="countries__img"
+                />
+                <img
+                  src="./assets/images/russia-flag.png"
+                  alt="Russia flag"
+                  class="countries__flag"
+                  width="60"
+                  height="60"
+                />
+                <div class="countries__info l-flex u-flex-col">
+                  <h3 class="u-sub-headline">Working Visa</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text the printing and provide
+                    best visa ever
+                  </p>
+                  <button class="btn btn--primary">
                     Apply Now
                     <i aria-hidden="true">🡪</i>
                   </button>
@@ -825,7 +898,7 @@
 
                   <div class="l-flex u-flex-ac">
                     <img
-                      src="./assets/images/service-2x.jpg"
+                      src="./assets/images/service-3x.jpg"
                       alt="Eleanor Pena"
                       class="testimonials__avatar"
                       width="50"
@@ -882,7 +955,7 @@
       </section>
 
       <section class="faq">
-        <div class="l-container u-wrapper">
+        <div class="faq__wrapper l-container u-wrapper">
           <div class="faq__header">
             <p class="u-section-label l-flex u-flex-ac">
               <img

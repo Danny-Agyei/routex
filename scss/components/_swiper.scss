@@ -11,6 +11,14 @@
         transform: translateY(-50%);
         z-index: 996;
 
+        @include breakpoint('tablet-landscape') {
+            justify-content: end;
+            position: static;
+            transform: unset;
+            width: 50%;
+        }
+
+
         // Testimonials swiper controls
         &-test {
             bottom: 1.4rem;
@@ -23,7 +31,5 @@
     &-button::after {
         display: none;
     }
-
-
 
 }

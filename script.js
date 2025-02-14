@@ -47,11 +47,17 @@ function initializeSwiper(className, swiperName) {
         // 500: {
         //   slidesPerView: 1,
         // },
-        768: {
+        500: {
+          slidesPerView: 3,
+        },
+        990: {
           slidesPerView: 4,
         },
-        960: {
-          slidesPerView: 5,
+        1200: {
+          slidesPerView: 6,
+          freeMode: true,
+          speed: 1000,
+          centeredSlides: false,
         },
       },
     },
@@ -60,6 +66,8 @@ function initializeSwiper(className, swiperName) {
   const swiperOption = options[swiperName];
 
   const swiper = new Swiper(className, {
+    observer: true,
+    observeParents: true,
     centeredSlides: true,
     slidesPerView: 1,
     loop: true,

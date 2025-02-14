@@ -1,25 +1,27 @@
 @use "../abstracts/function" as convert;
+@use "../abstracts/mixin" as *;
 
 .u-headline-primary {
-  font-size: convert.toRem(36);
-  font-size: clamp(convert.toRem(36), 2.3rem + 5.789644012945vw, 8rem)
+  font-size: convert.toRem(34);
+  font-size: clamp(convert.toRem(34), 1.4rem + 5.789644012945vw, 8rem)
 }
 
 .u-headline-secondary {
-  // font-size: convert.toRem(30);
-  // font-size: clamp(convert.toRem(30),
-  //     1.6055825242718447rem + 1.6828478964401297vw,
-  //     convert.toRem(50));
   font-size: convert.toRem(30);
   font-size: clamp(convert.toRem(30), 2rem + 2.2944983818770228vw, 5rem);
   max-width: 60rem;
+
+  @include breakpoint('tablet-landscape') {
+
+    max-width: 75rem;
+  }
 }
 
 .u-sub-headline {
   font-size: convert.toRem(18);
   font-size: clamp(convert.toRem(18),
       1.0339805825242718rem + 1.3883495145631068vw,
-      convert.toRem(22));
+      convert.toRem(20));
 }
 
 .u-section-label {

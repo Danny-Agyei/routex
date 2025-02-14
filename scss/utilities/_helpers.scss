@@ -1,8 +1,14 @@
 @use '../base/variable' as *;
 @use '../base/color' as *;
+@use "../abstracts/mixin" as *;
+
 
 .u-wrapper {
     padding-block: $space-x20;
+
+    @include breakpoint('tablet-landscape') {
+        padding-block: $space-x30;
+    }
 }
 
 .u-section-label {

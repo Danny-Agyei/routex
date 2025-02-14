@@ -4,44 +4,50 @@
 
 // Hero
 .hero {
-    background-color: $color-primary-900;
-    // background-image:
-    //     url("../../assets/images/hero-bg-right.png"), url("../../assets/images/hero-bg-left.png");
-    background-image:
-        url("../images/hero-bg-right.png"), url("../images/hero-bg-left.png");
-    background-position:
-        -43.5rem 0, 12rem 0;
-    background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
+    // background-color: $color-primary-900;
+    background-color: hsl(185.99deg 97.98% 8.27%);
     margin-block-end: $space-x16;
+    overflow: hidden;
+    position: relative;
 
-    @include breakpoint('tablet') {
-        background-image: url("../../assets/images/hero-bg-left.png");
-        background-size: cover;
-        background-position:
-            right bottom;
+    background-image: url('../../assets/images/hero-main-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+
+    @include breakpoint('tablet-landscape') {
+        background-size: 100%;
+        background-position: bottom;
+
     }
-
-    @include breakpoint('tablet-landscape') {}
 
     @include breakpoint('large') {
-        width: min(calc(100% - 8rem), 1600px);
-        margin-inline: auto;
         border-radius: 5rem;
+        margin-inline: auto;
+        width: min(calc(100% - 8rem), 1400px);
     }
 
-
     &__wrapper {
-        row-gap: 0;
+        align-items: center;
         padding-block: $space-x25 0;
+        position: relative;
+        row-gap: 0;
+        z-index: 5;
+
+
+        @include breakpoint('desktop') {
+            min-height: 65rem;
+        }
+
     }
 
     &__content {
         grid-column: 1/ -1;
 
         @include breakpoint('tablet-landscape') {
-
-            grid-column: 1/ 6;
+            grid-row: 1;
+            grid-column: 1/ 7;
+            margin-block-end: $space-x13;
         }
     }
 
@@ -55,8 +61,8 @@
     }
 
     &__btn-group {
-        justify-content: center;
         gap: $space-x6;
+        justify-content: center;
         margin-block: $space-x10;
 
         @include breakpoint('tablet-landscape') {
@@ -102,23 +108,39 @@
         background-repeat: no-repeat;
         background-position: center bottom;
         background-size: contain;
+        display: flex;
         grid-column: 1 / -1;
 
-        @include breakpoint('tablet') {
-            background-size: auto;
-        }
+        // @include breakpoint('tablet') {
+        //     background-size: 50rem;
+        // }
 
         @include breakpoint('tablet-landscape') {
-
             background-size: contain;
-            grid-column: 6 / -1;
+            grid-column: 7 / -1;
+            grid-row: 1;
+            height: 100%;
         }
+
+
+        // @include breakpoint('desktop') {
+        //     align-self: end;
+        // }
+
     }
 
     &__img {
-        width: 100%;
-        max-width: 48rem;
+        max-width: 65rem;
+        height: 100%;
         margin-inline: auto;
+        width: 100%;
+
+        @include breakpoint('tablet-landscape') {
+            // max-width: 100%;
+            width: 68rem;
+            height: 100%;
+        }
+
     }
 }
 
@@ -127,8 +149,8 @@
 
     &__header {
         margin-block-end: $space-x10;
-        text-align: center;
         max-width: 30rem;
+        text-align: center;
 
         @include breakpoint('tablet') {
             max-width: 45rem;
@@ -138,17 +160,27 @@
     &__list {
         gap: $space-x8;
         margin-block-end: $space-x13;
+
+        @include breakpoint('tablet-landscape') {
+
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     &__item {
         grid-column: 1 / -1;
-        text-align: center;
         max-width: 60rem;
+        text-align: center;
+
+        @include breakpoint('tablet-landscape') {
+
+            grid-column: unset;
+        }
     }
 
     &__icon {
-        width: 6rem;
         height: 6rem;
+        width: 6rem;
     }
 
     &__title {
@@ -161,12 +193,30 @@
     background-color: $color-neutral-100;
     padding-block-end: $space-x16;
 
+    @include breakpoint('tablet-landscape') {
+        padding-block-end: 0;
+
+    }
+
     &__wrapper {
         position: relative;
+        gap: $space-x13;
+
+        @include breakpoint('tablet') {
+            gap: $space-x10;
+        }
+
+        @include breakpoint('desktop') {
+            gap: $space-x20;
+        }
     }
 
     &__content {
         grid-column: 1/ -1;
+
+        @include breakpoint('tablet-landscape') {
+            grid-column: 6/ -1;
+        }
     }
 
     &__work {
@@ -184,7 +234,7 @@
     }
 
     &__description {
-        margin-block: $space-x4 $space-x10;
+        margin-block: $space-x4 $space-x8;
     }
 
     &__card {
@@ -206,12 +256,24 @@
         left: 0;
         right: 0;
         align-items: center;
-        gap: $space-x4;
+        gap: $space-x10;
+
+
+        @include breakpoint('tablet-landscape') {
+            flex-direction: row;
+            position: static;
+            margin-block-start: $space-x8;
+        }
     }
 
     &__phone {
-        gap: $space-x3;
+        gap: $space-x2;
         display: none;
+
+        @include breakpoint('tablet-landscape') {
+            display: flex;
+            max-width: 50%;
+        }
     }
 
     &__text {
@@ -222,12 +284,20 @@
         gap: $space-x5;
         grid-column: 1/ -1;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: 8rem 1fr 12.7rem;
-        margin-block: $space-x8;
+        grid-template-rows: 10rem 1fr 12.7rem;
+        margin-block: 0 $space-x8;
 
         @include breakpoint('tablet') {
             grid-template-rows: 15rem 30rem 20rem;
         }
+
+        @include breakpoint('tablet-landscape') {
+            grid-row: 1;
+            grid-column: 1/ 6;
+            grid-template-rows: 12rem 15rem 15rem;
+        }
+
+
     }
 
 
@@ -250,6 +320,10 @@
     &__years {
         font-size: 3rem;
         color: $color-neutral-100;
+
+        @include breakpoint('tablet') {
+            font-size: 5rem;
+        }
     }
 
     &__item {
@@ -321,6 +395,12 @@
 .countries {
     background-color: $color-primary-900;
 
+    @include breakpoint('large') {
+        border-radius: 5rem;
+        margin-inline: auto;
+        width: min(calc(100% - 8rem), 1400px);
+    }
+
 
     &__wrapper {
         position: relative;
@@ -331,6 +411,16 @@
 
         svg {
             fill: $color-neutral-100;
+        }
+
+        @include breakpoint('tablet') {
+            margin-block-end: $space-x13;
+
+        }
+
+        @include breakpoint('tablet-landscape') {
+            flex-direction: row;
+            align-items: center;
         }
     }
 
@@ -352,13 +442,17 @@
         max-width: 32rem;
 
         @include breakpoint('mobile') {
-            height: 42rem;
             width: 24rem !important;
 
             &--russia {
-                background-color: red;
                 width: 34rem !important;
             }
+        }
+
+        @include breakpoint('tablet-landscape') {
+            height: 42rem;
+            width: 100% !important;
+
         }
 
         &::after {
@@ -389,10 +483,9 @@
     }
 
     &__info {
-        background-color: $color-primary-500;
+        background-color: $color-neutral-100;
         border-radius: $radius-md;
         bottom: $space-x5;
-        color: $color-neutral-100;
         gap: $space-x4;
         left: 50%;
         padding: $space-x5;
@@ -404,6 +497,11 @@
 
     &__btn {
         border: 1px solid $color-neutral-100;
+
+        @include breakpoint('tablet-landscape') {
+            position: static;
+            border: none;
+        }
 
         &:hover {
             background-color: $color-neutral-100;
@@ -423,10 +521,19 @@
 
         &--next {
             transform: translateX(1.5rem);
+
+            @include breakpoint('tablet-landscape') {
+                transform: unset;
+                margin-inline-start: $space-x3;
+            }
         }
 
         &--prev {
             transform: translateX(-1.5rem);
+
+            @include breakpoint('tablet-landscape') {
+                transform: unset;
+            }
         }
     }
 
@@ -444,6 +551,10 @@
 
     &__categories {
         gap: $space-x6;
+
+        @include breakpoint('tablet-landscape') {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &__item {
@@ -454,13 +565,22 @@
         @include breakpoint('tablet') {
             grid-template-columns: 1fr 1fr;
             align-items: center;
+        }
 
+        @include breakpoint('tablet-landscape') {
+            grid-column: unset;
         }
     }
 
     &__img {
         border-radius: $radius-md;
         width: 100%;
+
+        @include breakpoint('tablet-landscape') {
+            height: 100%;
+            object-fit: cover;
+
+        }
     }
 
     &__details {
@@ -492,6 +612,13 @@
             object-fit: cover;
             width: 100%;
         }
+
+        @include breakpoint('tablet-landscape') {
+            grid-column: 1 / 8;
+            height: 54rem;
+            object-position: top;
+
+        }
     }
 
     &__swiper {
@@ -511,6 +638,12 @@
             grid-row: 1;
         }
 
+        @include breakpoint('tablet-landscape') {
+            grid-column: 7 / -1;
+            height: 35rem;
+            padding: $space-x8;
+        }
+
         &::after {
             content: "";
             width: 55%;
@@ -525,6 +658,11 @@
     &__description {
         margin-block: $space-x5 $space-x8;
         font-size: 1.6rem;
+
+        @include breakpoint('tablet-landscape') {
+            font-size: 1.8rem;
+
+        }
     }
 
     &__role {
@@ -559,6 +697,12 @@
     &__icon {
         height: 3rem;
         width: 3rem;
+
+        @include breakpoint('tablet-landscape') {
+            height: 4rem;
+            width: 4rem;
+
+        }
     }
 
     &__avatar {
@@ -567,12 +711,21 @@
         margin-inline-end: $space-x3;
         object-fit: cover;
         width: 4.5rem;
+        align-self: flex-start;
     }
 }
 
 // Faq 
 .faq {
     background-color: $color-neutral-100;
+
+    @include breakpoint('tablet-landscape') {
+        &__wrapper {
+            margin-inline: auto;
+            max-width: 80rem;
+
+        }
+    }
 
     &__header {
         margin-block-end: $space-x10;
