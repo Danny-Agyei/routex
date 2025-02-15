@@ -416,6 +416,7 @@ h2 {
 }
 @media screen and (min-width: 62em) {
   .swiper-controls {
+    align-self: end;
     justify-content: end;
     position: static;
     transform: unset;
@@ -432,6 +433,9 @@ h2 {
   display: none;
 }
 
+.accordion__item {
+  overflow: hidden;
+}
 .accordion__item:nth-child(2) {
   margin-block: 2rem;
 }
@@ -444,12 +448,12 @@ h2 {
   gap: 1.2rem;
 }
 .accordion__btn[aria-expanded=true] .accordion__icon {
-  transform: rotate(-90deg);
-  border-color: hsl(86, 73%, 46%);
   background-color: hsl(86, 73%, 46%);
+  border-color: hsl(86, 73%, 46%);
 }
 .accordion__btn[aria-expanded=true] .accordion__icon svg {
   fill: hsl(0, 0%, 100%);
+  transform: rotate(-90deg);
 }
 .accordion__btn:hover .accordion__icon {
   background-color: hsl(162, 92%, 15%);
@@ -458,13 +462,23 @@ h2 {
   fill: hsl(0, 0%, 100%);
 }
 .accordion__icon {
+  background-color: transparent;
   border: 1px solid hsl(162, 92%, 15%);
+  transition: background-color 0.3s ease;
 }
 .accordion__icon svg {
   fill: hsl(162, 92%, 15%);
+  transition: transform 0.3s ease;
 }
 .accordion__panel {
-  padding-block-start: 0.8rem;
+  height: 0;
+  overflow: hidden;
+  padding-block-start: 0;
+  transition: padding 0.25s ease;
+}
+.accordion__panel.has-expanded {
+  height: 100%;
+  padding-block-start: 1.2rem;
 }
 
 .form__input {
@@ -501,6 +515,18 @@ h2 {
 
 .header {
   background-color: hsl(0, 0%, 100%);
+}
+.header.is-visible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(0);
+}
+.header.is-hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
 }
 .header__wrapper {
   align-items: center;
@@ -588,20 +614,25 @@ h2 {
   visibility: visible;
   opacity: 1;
 }
-.nav__wrapper {
+.nav__menu {
   background-color: hsl(0, 0%, 100%);
   height: 100vh;
   position: fixed;
   right: 0;
-  visibility: hidden;
   top: 0;
   width: 27.5rem;
   transform: translateX(110%);
-  transition: all 0.35s ease-in-out;
+  transition: all 0.4s ease;
   z-index: 999;
 }
+.nav__menu.is-hidden {
+  display: none;
+}
+.nav__menu.is-visible {
+  transform: translateX(0);
+}
 @media screen and (min-width: 62em) {
-  .nav__wrapper {
+  .nav__menu {
     height: auto;
     visibility: visible;
     transform: unset;
@@ -609,19 +640,13 @@ h2 {
     opacity: unset;
     position: unset;
   }
-}
-.nav__wrapper.is-visible {
-  visibility: visible;
-  opacity: 1;
-  transform: translateX(0);
-}
-.nav__wrapper.is-visible .nav__list {
-  display: flex;
+  .nav__menu.is-hidden {
+    display: block;
+  }
 }
 .nav__list {
   gap: 2.4rem;
-  padding: 8rem 0 0 3.2rem;
-  display: none;
+  padding: 10rem 0 0 3.2rem;
 }
 @media screen and (min-width: 62em) {
   .nav__list {
@@ -640,16 +665,14 @@ h2 {
 }
 .nav__link {
   color: hsl(162, 92%, 15%);
-  font-weight: 600;
+  font-weight: 500;
   transition: color 0.35s ease-in-out;
+}
+.nav__link[aria-current=page] {
+  color: hsl(86, 73%, 46%) !important;
 }
 .nav__link:hover, .nav__link:focus {
   color: hsl(86, 73%, 46%);
-}
-@media screen and (min-width: 62em) {
-  .nav__link {
-    font-weight: 500;
-  }
 }
 .nav__toggle--open {
   align-items: center;
@@ -663,11 +686,12 @@ h2 {
   }
 }
 .nav__toggle--close {
-  height: 3rem;
+  height: 2.5rem;
+  padding: 0;
   position: absolute;
-  right: 2rem;
-  top: 2rem;
-  width: 3rem;
+  right: 2.4rem;
+  top: 2.4rem;
+  width: 2.5rem;
 }
 @media screen and (min-width: 62em) {
   .nav__toggle--close {
@@ -680,7 +704,7 @@ h2 {
   margin-block-end: 6.4rem;
   overflow: hidden;
   position: relative;
-  background-image: url("../../assets/images/hero-main-bg.png");
+  background-image: url("../assets/images/hero-main-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -764,7 +788,7 @@ h2 {
   background-color: hsl(86, 73%, 46%);
 }
 .hero__banner {
-  background-image: url("../../assets/images/hero-img-bg.png");
+  background-image: url("../assets/images/hero-img-bg.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
@@ -887,12 +911,12 @@ h2 {
   height: 5rem;
 }
 .about__contact {
-  position: absolute;
+  align-items: center;
   bottom: 0;
   left: 0;
   right: 0;
-  align-items: center;
   gap: 4rem;
+  position: absolute;
 }
 @media screen and (min-width: 62em) {
   .about__contact {
@@ -902,8 +926,8 @@ h2 {
   }
 }
 .about__phone {
-  gap: 0.8rem;
   display: none;
+  gap: 0.8rem;
 }
 @media screen and (min-width: 62em) {
   .about__phone {
@@ -957,9 +981,9 @@ h2 {
   }
 }
 .about__item {
-  justify-self: center;
   align-self: end;
   height: 100%;
+  justify-self: center;
   max-width: 70rem;
 }
 .about__item--one {
@@ -981,9 +1005,9 @@ h2 {
 }
 @media screen and (min-width: 48em) {
   .about__item--two img {
+    justify-self: center;
     max-width: 20rem;
     max-height: 100%;
-    justify-self: center;
   }
 }
 .about__item--three {
@@ -1245,17 +1269,17 @@ h2 {
   }
 }
 .testimonials__swiper::after {
-  content: "";
-  width: 55%;
-  height: 1px;
   background-color: hsl(0, 0%, 100%);
-  position: absolute;
   bottom: 3.2rem;
+  content: "";
+  height: 1px;
   left: 2rem;
+  position: absolute;
+  width: 55%;
 }
 .testimonials__description {
-  margin-block: 2rem 3.2rem;
   font-size: 1.6rem;
+  margin-block: 2rem 3.2rem;
 }
 @media screen and (min-width: 62em) {
   .testimonials__description {
@@ -1277,9 +1301,9 @@ h2 {
   fill: hsl(0, 0%, 100%);
 }
 .testimonials__btn svg {
-  width: auto;
-  height: auto;
   fill: hsl(162, 92%, 15%);
+  height: auto;
+  width: auto;
 }
 .testimonials__btn--prev {
   margin-inline-end: 1.6rem;
@@ -1295,12 +1319,12 @@ h2 {
   }
 }
 .testimonials__avatar {
+  align-self: flex-start;
   border-radius: 99.9rem;
   height: 4.5rem;
   margin-inline-end: 1.2rem;
   object-fit: cover;
   width: 4.5rem;
-  align-self: flex-start;
 }
 
 .faq {
@@ -1318,7 +1342,7 @@ h2 {
 
 .footer {
   background-color: hsl(185.99, 97.98%, 8.27%);
-  background-image: url("/assets/images/footer-bg.png");
+  background-image: url("../assets/images/footer-bg.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

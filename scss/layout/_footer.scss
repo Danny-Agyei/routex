@@ -3,10 +3,8 @@
 @use '../abstracts/mixin' as *;
 
 .footer {
-    // background-color: $color-primary-900;
     background-color: hsl(185.99deg 97.98% 8.27%);
-    // background-image: url("../images/footer-bg.png");
-    background-image: url("/assets/images/footer-bg.png");
+    background-image: url("../assets/images/footer-bg.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

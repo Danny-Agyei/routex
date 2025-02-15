@@ -1,6 +1,58 @@
 const pageSwipers = document.querySelectorAll(".swiper");
-const btnNavToggle = document.querySelectorAll(".js-nav-toggle");
+const btnNavOpen = document.querySelector(".js-nav-open");
+const btnNavClose = document.querySelector(".js-nav-close");
+const btnAccordion = document.querySelectorAll(".js-accordion-trigger");
 
+// Sticky navbar on scroll
+window.addEventListener("scroll", function () {
+  const scrolledValue = this.scrollY;
+});
+
+// Navbar toggling handler
+btnNavOpen.addEventListener("click", () => toggleNavMenu(btnNavOpen));
+btnNavClose.addEventListener("click", () => toggleNavMenu(btnNavClose));
+
+function toggleNavMenu() {
+  const navMenu = document.querySelector(".js-nav-menu");
+  const navOverlay = document.querySelector(".js-nav-overlay");
+  const isOpen = navMenu.classList.contains("is-hidden");
+
+  navOverlay.classList.toggle("is-visible", isOpen);
+  document.body.classList.toggle("noscroll", isOpen);
+
+  btnNavOpen.ariaExpanded = isOpen ? true : false;
+  btnNavClose.ariaExpanded = isOpen ? true : false;
+
+  if (isOpen) {
+    navMenu.classList.remove("is-hidden");
+
+    setTimeout(() => navMenu.classList.add("is-visible"), 100);
+  } else if (!isOpen) {
+    navMenu.classList.remove("is-visible");
+
+    setTimeout(() => navMenu.classList.add("is-hidden"), 300);
+  }
+}
+
+// Accordion Trigger handler
+Array.from(btnAccordion).forEach((btn) => {
+  btn.addEventListener("click", toggleAccordion.bind(btn));
+});
+
+function toggleAccordion() {
+  const allPanels = document.querySelectorAll(".js-accordion-panel");
+  const triggeredPanel = document.getElementById(
+    this.getAttribute("aria-controls")
+  );
+
+  btnAccordion.forEach((btn) => btn.setAttribute("aria-expanded", false));
+  this.ariaExpanded = true;
+
+  allPanels.forEach((panel) => panel.classList.remove("has-expanded"));
+  triggeredPanel.classList.add("has-expanded");
+}
+
+// Countries and Testimonials Swiper handler
 Array.from(pageSwipers).forEach((swiper) => {
   const swiperName = swiper.getAttribute("data-name");
   let className;
@@ -44,9 +96,6 @@ function initializeSwiper(className, swiperName) {
         320: {
           slidesPerView: "auto",
         },
-        // 500: {
-        //   slidesPerView: 1,
-        // },
         500: {
           slidesPerView: 3,
         },
@@ -74,23 +123,4 @@ function initializeSwiper(className, swiperName) {
     createElements: true,
     ...swiperOption,
   });
-}
-
-// Navbar
-
-Array.from(btnNavToggle).forEach((btn) => {
-  const type = btn.getAttribute("data-toggle-type");
-
-  const isOpen = type === "open";
-
-  btn.addEventListener("click", (e) => toggleNavMenu(isOpen));
-});
-
-function toggleNavMenu(isOpen) {
-  const navWrapper = document.querySelector(".js-nav-wrapper");
-  const navOverlay = document.querySelector(".js-nav-overlay");
-
-  navOverlay.classList.toggle("is-visible", isOpen);
-  navWrapper.classList.toggle("is-visible", isOpen);
-  document.body.classList.toggle("noscroll", isOpen);
 }

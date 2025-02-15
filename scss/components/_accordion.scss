@@ -3,8 +3,12 @@
 
 .accordion {
 
-    &__item:nth-child(2) {
-        margin-block: $space-x5;
+    &__item {
+        overflow: hidden;
+
+        &:nth-child(2) {
+            margin-block: $space-x5;
+        }
     }
 
     &__headline {
@@ -20,14 +24,15 @@
         &[aria-expanded='true'] {
 
             .accordion__icon {
-                transform: rotate(-90deg);
-                border-color: $color-primary-500;
                 background-color: $color-primary-500;
+                border-color: $color-primary-500;
 
                 svg {
                     fill: $color-neutral-100;
+                    transform: rotate(-90deg);
                 }
             }
+
         }
 
         &:hover {
@@ -42,15 +47,26 @@
     }
 
     &__icon {
+        background-color: transparent;
         border: 1px solid $color-primary-900;
+        transition: background-color 0.3s ease;
 
         svg {
-            fill: $color-primary-900
+            fill: $color-primary-900;
+            transition: transform 0.3s ease;
         }
     }
 
     &__panel {
-        padding-block-start: $space-x2;
+        height: 0;
+        overflow: hidden;
+        padding-block-start: 0;
+        transition: padding 0.25s ease;
+
+        &.has-expanded {
+            height: 100%;
+            padding-block-start: $space-x3;
+        }
     }
 
 }

@@ -11,7 +11,9 @@
         transform: translateY(-50%);
         z-index: 996;
 
+
         @include breakpoint('tablet-landscape') {
+            align-self: end;
             justify-content: end;
             position: static;
             transform: unset;

@@ -74,7 +74,7 @@
   </head>
 
   <body>
-    <header class="header">
+    <header class="header js-header">
       <div class="header__wrapper l-container">
         <div class="header__logo-wrapper">
           <a href="/">
@@ -88,8 +88,8 @@
           </a>
         </div>
         <nav id="nav-main" class="header__nav nav" aria-label="Main">
-          <div class="nav__overlay js-nav-overlay"></div>
-          <div class="nav__wrapper js-nav-wrapper">
+          <div class="nav__overlay js-nav-overlay" aria-hidden="true"></div>
+          <div class="nav__menu js-nav-menu is-hidden">
             <ul class="nav__list l-flex u-flex-col">
               <li>
                 <a href="/home" class="nav__link" aria-current="page">Home</a>
@@ -103,7 +103,7 @@
 
             <!-- Close Button -->
             <button
-              class="js-nav-toggle btn nav__toggle nav__toggle--close"
+              class="js-nav-close btn nav__toggle nav__toggle--close"
               aria-label="Close Main Navigation"
               aria-controls="nav-main"
               aria-expanded="true"
@@ -139,7 +139,7 @@
 
           <!-- Open Button -->
           <button
-            class="js-nav-toggle btn nav__toggle nav__toggle--open"
+            class="js-nav-open btn nav__toggle nav__toggle--open"
             aria-label="Open Main Navigation"
             aria-controls="nav-main"
             aria-expanded="false"
@@ -1004,7 +1004,7 @@
                 id="accordion-panel-1"
                 role="region"
                 aria-labelledby="accordion-header-1"
-                class="accordion__panel"
+                class="accordion__panel js-accordion-panel has-expanded"
               >
                 Lorem Ipsum is simply dummy text the printing and typese Lorem
                 Ipsum has been the industry's standard dummy text ever
@@ -1044,7 +1044,7 @@
                 id="accordion-panel-2"
                 role="region"
                 aria-labelledby="accordion-header-2"
-                class="accordion__panel"
+                class="accordion__panel js-accordion-panel"
               >
                 Lorem Ipsum is simply dummy text the printing and types Lorem
                 Ipsum has been the industry's standard dummy text ever
@@ -1084,7 +1084,7 @@
                 id="accordion-panel-3"
                 role="region"
                 aria-labelledby="accordion-header-3"
-                class="accordion__panel"
+                class="accordion__panel js-accordion-panel"
               >
                 Lorem Ipsum is simply dummy text the printing and types Lorem
                 Ipsum has been the industry's standard dummy text ever
