@@ -2,18 +2,35 @@
 @use "../abstracts/mixin" as *;
 
 .u-headline-primary {
-  font-size: convert.toRem(34);
-  font-size: clamp(convert.toRem(34), 1.4rem + 5.789644012945vw, 8rem)
+  font-size: convert.toRem(30);
+  margin-inline: auto;
+  max-width: 22ch;
+
+
+  @include breakpoint('mobile') {
+    font-size: 4.5rem;
+  }
+
+  @include breakpoint('tablet') {
+    font-size: 5.8rem;
+  }
+
+  @include breakpoint('tablet-landscape') {
+    font-size: 8rem;
+  }
+
 }
 
 .u-headline-secondary {
-  font-size: convert.toRem(30);
-  font-size: clamp(convert.toRem(30), 2rem + 2.2944983818770228vw, 5rem);
-  max-width: 60rem;
+  font-size: 3rem;
+  max-width: 28ch;
+
+  @include breakpoint('tablet') {
+    font-size: 3.8rem;
+  }
 
   @include breakpoint('tablet-landscape') {
-
-    max-width: 75rem;
+    font-size: 4.6rem;
   }
 }
 

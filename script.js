@@ -1,7 +1,7 @@
 const pageSwipers = document.querySelectorAll(".swiper");
 const btnNavOpen = document.querySelector(".js-nav-open");
 const btnNavClose = document.querySelector(".js-nav-close");
-const btnAccordion = document.querySelectorAll(".js-accordion-trigger");
+const accordionTriggers = document.querySelectorAll(".js-accordion-trigger");
 
 // Sticky navbar on scroll
 window.addEventListener("scroll", function () {
@@ -35,21 +35,21 @@ function toggleNavMenu() {
 }
 
 // Accordion Trigger handler
-Array.from(btnAccordion).forEach((btn) => {
+Array.from(accordionTriggers).forEach((btn) => {
   btn.addEventListener("click", toggleAccordion.bind(btn));
 });
 
 function toggleAccordion() {
-  const allPanels = document.querySelectorAll(".js-accordion-panel");
-  const triggeredPanel = document.getElementById(
+  const panels = document.querySelectorAll(".js-accordion-panel");
+  const panelToExpand = document.getElementById(
     this.getAttribute("aria-controls")
   );
 
-  btnAccordion.forEach((btn) => btn.setAttribute("aria-expanded", false));
+  accordionTriggers.forEach((btn) => btn.setAttribute("aria-expanded", false));
   this.ariaExpanded = true;
 
-  allPanels.forEach((panel) => panel.classList.remove("has-expanded"));
-  triggeredPanel.classList.add("has-expanded");
+  panels.forEach((panel) => panel.classList.remove("has-expanded"));
+  panelToExpand.classList.add("has-expanded");
 }
 
 // Countries and Testimonials Swiper handler
@@ -96,7 +96,7 @@ function initializeSwiper(className, swiperName) {
         320: {
           slidesPerView: "auto",
         },
-        500: {
+        550: {
           slidesPerView: 3,
         },
         990: {

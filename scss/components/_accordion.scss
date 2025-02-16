@@ -5,6 +5,7 @@
 
     &__item {
         overflow: hidden;
+        padding: 0;
 
         &:nth-child(2) {
             margin-block: $space-x5;
@@ -13,19 +14,22 @@
 
     &__headline {
         color: $color-primary-900;
-        font-weight: 700;
+        font-weight: 600;
+        width: 85%;
     }
 
 
     &__btn {
+        padding: $space-x5;
         text-align: left;
         gap: $space-x3;
+        transition: background 0.3s linear;
 
         &[aria-expanded='true'] {
+            background-color: rgba($color-primary-500, 0.5);
 
             .accordion__icon {
-                background-color: $color-primary-500;
-                border-color: $color-primary-500;
+                background-color: $color-primary-900;
 
                 svg {
                     fill: $color-neutral-100;
@@ -60,12 +64,12 @@
     &__panel {
         height: 0;
         overflow: hidden;
-        padding-block-start: 0;
+        padding-inline: $space-x4;
         transition: padding 0.25s ease;
 
         &.has-expanded {
             height: 100%;
-            padding-block-start: $space-x3;
+            padding-block: $space-x6;
         }
     }
 

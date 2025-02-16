@@ -4,7 +4,7 @@
  @use '../base/color' as *;
 
  .header {
-     background-color: $color-neutral-100;
+     //  background-color: $color-neutral-100;
 
      &.is-visible {
          position: fixed;
@@ -79,6 +79,11 @@
 
          .btn__arrow {
              font-size: 1.2rem;
+             display: none;
+
+             @include breakpoint('mobile') {
+                 display: block;
+             }
          }
 
          @include breakpoint('tablet-landscape') {
@@ -120,9 +125,9 @@
          position: fixed;
          right: 0;
          top: 0;
-         width: 27.5rem;
          transform: translateX(110%);
          transition: all 0.4s ease;
+         width: 27rem;
          z-index: 999;
 
 
@@ -135,12 +140,13 @@
          }
 
          @include breakpoint('tablet-landscape') {
+             background-color: transparent;
              height: auto;
-             visibility: visible;
-             transform: unset;
-             width: unset;
              opacity: unset;
              position: unset;
+             transform: unset;
+             visibility: visible;
+             width: unset;
 
              &.is-hidden {
                  display: block;
@@ -170,7 +176,7 @@
      &__link {
          color: $color-primary-900;
          font-weight: 500;
-         transition: color 0.35s ease-in-out;
+         transition: color 0.35s ease;
 
          &[aria-current='page'] {
              color: $color-primary-500 !important;

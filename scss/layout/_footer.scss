@@ -3,7 +3,7 @@
 @use '../abstracts/mixin' as *;
 
 .footer {
-    background-color: hsl(185.99deg 97.98% 8.27%);
+    background-color: $color-secondary-900;
     background-image: url("../assets/images/footer-bg.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -12,16 +12,16 @@
 
     &__wrapper {
         gap: $space-x13;
-        padding-block-end: $space-x10;
         grid-template-columns: 1fr;
+        padding-block-end: $space-x10;
 
         @include breakpoint('mobile') {
             grid-template-columns: repeat(6, 1fr);
         }
 
         @include breakpoint('tablet-landscape') {
-            grid-template-columns: 1fr repeat(2, 0.5fr) 0.8fr;
             gap: $space-x13;
+            grid-template-columns: 1fr repeat(2, 0.5fr) 0.8fr;
             padding-block: $space-x30;
         }
     }
@@ -70,14 +70,14 @@
         gap: $space-x3;
 
         &__links {
+            align-items: center;
             background-color: transparent;
             border-radius: $radius-full;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 4rem;
             height: 4rem;
+            justify-content: center;
             transition: background $transition-standard;
+            width: 4rem;
 
             &:hover {
                 background-color: $color-primary-500;
@@ -87,8 +87,8 @@
 
 
     &__brands {
-        width: 2.4rem;
         height: 2.4rem;
+        width: 2.4rem;
     }
 
     &__headline {
@@ -101,8 +101,8 @@
     }
 
     &__link {
-        width: max-content;
         transition: all $transition-standard;
+        width: max-content;
 
         &:hover {
             color: $color-primary-500;

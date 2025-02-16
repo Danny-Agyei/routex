@@ -4,8 +4,7 @@
 
 // Hero
 .hero {
-    // background-color: $color-primary-900;
-    background-color: hsl(185.99deg 97.98% 8.27%);
+    background-color: $color-secondary-900;
     margin-block-end: $space-x16;
     overflow: hidden;
     position: relative;
@@ -18,7 +17,6 @@
     @include breakpoint('tablet-landscape') {
         background-size: 100%;
         background-position: bottom;
-
     }
 
     @include breakpoint('large') {
@@ -178,12 +176,48 @@
         }
     }
 
+    &__link {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s ease;
+
+        &::after {
+            border-radius: $radius-sm;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(0);
+            transform-origin: top right;
+            background-color: transparent;
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+
+        &:hover {
+            color: hsl(150deg 2.78% 85.88%);
+            background-color: transparent;
+
+            .services__title {
+                color: $color-neutral-100;
+            }
+
+            &::after {
+                background-color: $color-primary-900;
+                transform: scale(1);
+            }
+        }
+    }
+
     &__icon {
         height: 6rem;
         width: 6rem;
     }
 
     &__title {
+        transition: color 0.4s ease;
         margin-block: $space-x8 $space-x4;
     }
 }
@@ -318,10 +352,10 @@
     }
 
     &__years {
-        font-size: 3rem;
+        font-size: 2.6rem;
         color: $color-neutral-100;
 
-        @include breakpoint('tablet') {
+        @include breakpoint('mobile') {
             font-size: 5rem;
         }
     }
@@ -393,7 +427,7 @@
 // Countries
 
 .countries {
-    background-color: $color-primary-900;
+    background-color: $color-secondary-900;
 
     @include breakpoint('large') {
         border-radius: 5rem;
@@ -558,13 +592,21 @@
     }
 
     &__item {
+        background-color: $color-neutral-100;
+        cursor: pointer;
         gap: $space-x6;
         grid-column: 1 / -1;
         grid-template-columns: 1fr;
+        transition: all 0.4s ease;
+
+        &:hover {
+            box-shadow: 5px 5px 0 $color-primary-500;
+            transform: scale(1.03);
+        }
 
         @include breakpoint('tablet') {
-            grid-template-columns: 1fr 1fr;
             align-items: center;
+            grid-template-columns: 1fr 1fr;
         }
 
         @include breakpoint('tablet-landscape') {
