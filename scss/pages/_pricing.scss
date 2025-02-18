@@ -1,0 +1,90 @@
+@use '../base/color' as *;
+@use '../base/variable' as *;
+@use '../abstracts/mixin' as *;
+
+.pricing {
+    &-banner {
+        margin-block-end: 0;
+    }
+
+    &__list {
+        display: grid;
+        gap: $space-x10;
+        grid-template-columns: 1fr;
+
+        @include breakpoint('tablet') {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include breakpoint('tablet-landscape') {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__item {
+        background-color: $color-neutral-100;
+        cursor: pointer;
+        overflow: hidden;
+        padding: 0;
+        transition: all 0.4s ease;
+
+        &:hover {
+            transform: scale(1.01) translateY(-0.5rem);
+
+        }
+    }
+
+    &__title {
+        background-color: hsla(86, 73%, 46%, 0.5);
+        font-size: 2.6rem;
+        font-weight: 500;
+        text-align: center;
+        padding: $space-x6 0;
+
+        &--premium {
+            background-color: hsl(185.99, 97.98%, 8.27%);
+            color: $color-neutral-100;
+        }
+    }
+
+    &__price {
+        font-size: 4rem;
+        margin-inline-start: $space-x2;
+        margin-block: $space-x6;
+        text-align: center;
+
+        @include breakpoint('desktop') {
+            font-size: 5rem;
+        }
+    }
+
+    &__text {
+        font-size: 2rem;
+    }
+
+    &__info {
+        padding: 0 $space-x10 $space-x10;
+
+        @include breakpoint('tablet-landscape') {
+            padding: 0 $space-x5 $space-x5;
+        }
+
+        @include breakpoint('desktop') {
+            padding: 0 $space-x10 $space-x10;
+        }
+    }
+
+    &__benefit {
+        border-top: 1px solid $color-neutral-200;
+        gap: $space-x3;
+        padding-block: $space-x6 $space-x8;
+    }
+
+    &__btn {
+        padding-block: $space-x4;
+
+        .btn__arrow {
+            fill: $color-neutral-100;
+        }
+    }
+}

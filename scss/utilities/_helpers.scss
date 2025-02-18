@@ -11,6 +11,36 @@
     }
 }
 
+.u-light-bg {
+    background-color: $color-neutral-100;
+}
+
+.u-section-bg {
+    background-color: $color-secondary-900;
+    background-image: url('../assets/images/hero-main-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+
+    @include breakpoint('tablet-landscape') {
+        background-size: 100%;
+        background-position: bottom;
+    }
+
+    @include breakpoint('desktop') {
+        align-items: center;
+        border-radius: 5rem;
+        display: flex;
+        justify-content: center;
+        min-height: 45rem;
+    }
+
+    @include breakpoint('large') {
+        margin-inline: auto;
+        width: min(calc(100% - 8rem), 1400px);
+    }
+}
+
 .u-section-label {
     align-items: center;
     color: $color-primary-900;

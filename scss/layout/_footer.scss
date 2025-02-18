@@ -58,6 +58,35 @@
         }
     }
 
+    &-form__group {
+        position: relative;
+        height: 5rem;
+        background-color: $color-neutral-900;
+        border-radius: $radius-full;
+        padding-inline-start: $space-x4;
+
+        .btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 5rem;
+            width: 5rem;
+
+            &:hover {
+                background-color: $color-primary-500;
+                opacity: 0.9;
+            }
+
+            svg {
+                fill: $color-neutral-100;
+            }
+        }
+    }
+
+    &__input {
+        color: $color-neutral-100;
+    }
+
     &__logo {
         width: 16rem;
     }

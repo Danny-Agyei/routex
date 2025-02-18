@@ -62,22 +62,14 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- Font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="./dist/style.css" />
   </head>
 
   <body>
-    <header class="header js-header">
+    <header class="header u-light-bg js-header">
       <div class="header__wrapper l-container">
         <div class="header__logo-wrapper">
-          <a href="/">
+          <a href="/index.html">
             <img
               src="./assets/images/logo.png"
               alt="Routex Home"
@@ -92,12 +84,13 @@
           <div class="nav__menu js-nav-menu is-hidden">
             <ul class="nav__list l-flex u-flex-col">
               <li>
-                <a href="/home" class="nav__link" aria-current="page">Home</a>
+                <a href="/index.html" class="nav__link" aria-current="page"
+                  >Home</a
+                >
               </li>
               <li><a href="/about" class="nav__link">About us</a></li>
-              <li><a href="/service" class="nav__link">Services</a></li>
+              <li><a href="/services" class="nav__link">Services</a></li>
               <li><a href="/pricing" class="nav__link">Pricing</a></li>
-              <li><a href="/blog" class="nav__link">Blog</a></li>
               <li><a href="/contact" class="nav__link">Contact</a></li>
             </ul>
 
@@ -159,51 +152,79 @@
 
         <a href="#" class="btn btn--primary header__btn">
           Book a Call
-          <i class="btn__arrow" aria-hidden="true">🡪</i>
+          <svg
+            class="btn__arrow"
+            aria-hidden="true"
+            width="15"
+            height="14"
+            viewBox="0 0 15 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.6875 7.75781L8.6875 12.7578C8.5 12.9453 8.25 13.0391 8 13.0391C7.71875 13.0391 7.46875 12.9453 7.28125 12.7578C6.875 12.3828 6.875 11.7266 7.28125 11.3516L10.5625 8.03906H1C0.4375 8.03906 0 7.60156 0 7.03906C0 6.50781 0.4375 6.03906 1 6.03906H10.5625L7.28125 2.75781C6.875 2.38281 6.875 1.72656 7.28125 1.35156C7.65625 0.945312 8.3125 0.945312 8.6875 1.35156L13.6875 6.35156C14.0938 6.72656 14.0938 7.38281 13.6875 7.75781Z"
+              fill="none"
+            />
+          </svg>
         </a>
       </div>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="l-container">
-          <div class="hero__wrapper u-wrapper l-grid">
-            <div class="hero__content">
-              <h1 class="hero__headline u-headline-primary">
-                For dreamers who mean to explore the world
-              </h1>
-              <div class="hero__btn-group l-flex u-flex-ac">
-                <a href="#" class="hero__btn btn btn--light">
-                  Book a Consultation
-                  <i class="btn__arrow" aria-hidden="true">🡪</i>
-                </a>
-                <button
-                  class="hero__play btn btn-icon-only btn--primary btn--round"
-                  aria-label="Play Our Video"
-                >
-                  <svg
-                    aria-hidden="true"
-                    width="21"
-                    height="23"
-                    viewBox="0 0 21 23"
-                    fill="white"
-                    xmlns="http://www.w3.org/2000/svg"
+      <section class="u-light-bg hero">
+        <div class="u-section-bg">
+          <div class="l-container">
+            <div class="hero__wrapper u-wrapper l-grid">
+              <div class="hero__content">
+                <h1 class="hero__headline u-headline-primary">
+                  For dreamers who mean to explore the world
+                </h1>
+                <div class="hero__btn-group l-flex u-flex-ac">
+                  <a href="#" class="hero__btn btn btn--light">
+                    Book a Consultation
+                    <svg
+                      class="btn__arrow"
+                      aria-hidden="true"
+                      width="15"
+                      height="14"
+                      viewBox="0 0 15 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.6875 7.75781L8.6875 12.7578C8.5 12.9453 8.25 13.0391 8 13.0391C7.71875 13.0391 7.46875 12.9453 7.28125 12.7578C6.875 12.3828 6.875 11.7266 7.28125 11.3516L10.5625 8.03906H1C0.4375 8.03906 0 7.60156 0 7.03906C0 6.50781 0.4375 6.03906 1 6.03906H10.5625L7.28125 2.75781C6.875 2.38281 6.875 1.72656 7.28125 1.35156C7.65625 0.945312 8.3125 0.945312 8.6875 1.35156L13.6875 6.35156C14.0938 6.72656 14.0938 7.38281 13.6875 7.75781Z"
+                        fill="none"
+                      />
+                    </svg>
+                  </a>
+                  <button
+                    class="hero__play btn btn-icon-only btn--primary btn--round"
+                    aria-label="Play Our Video"
                   >
-                    <path
-                      d="M0.285475 1.82497C0.285475 0.565117 1.64931 -0.222297 2.74038 0.407632L19.387 10.0186C20.4781 10.6485 20.4781 12.2233 19.387 12.8533L2.74038 22.4642C1.64931 23.0941 0.285475 22.3067 0.285475 21.0469L0.285475 1.82497Z"
-                    />
-                  </svg>
-                </button>
+                    <svg
+                      aria-hidden="true"
+                      width="21"
+                      height="23"
+                      viewBox="0 0 21 23"
+                      fill="white"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.285475 1.82497C0.285475 0.565117 1.64931 -0.222297 2.74038 0.407632L19.387 10.0186C20.4781 10.6485 20.4781 12.2233 19.387 12.8533L2.74038 22.4642C1.64931 23.0941 0.285475 22.3067 0.285475 21.0469L0.285475 1.82497Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="hero__banner">
-              <img
-                src="./assets/images/hero-1x.png"
-                alt="Man with pink luggage waving and smiling"
-                class="hero__img"
-                width="300"
-                height="300"
-              />
+              <div class="hero__banner">
+                <img
+                  src="./assets/images/hero-1x.png"
+                  alt="Man with pink luggage waving and smiling"
+                  class="hero__img"
+                  width="300"
+                  height="300"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -293,7 +314,20 @@
           </ul>
           <button class="services__btn btn btn--primary">
             Read more
-            <i class="btn__arrow" aria-hidden="true">🡪</i>
+            <svg
+              class="btn__arrow btn__arrow--light"
+              aria-hidden="true"
+              width="15"
+              height="14"
+              viewBox="0 0 15 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.6875 7.75781L8.6875 12.7578C8.5 12.9453 8.25 13.0391 8 13.0391C7.71875 13.0391 7.46875 12.9453 7.28125 12.7578C6.875 12.3828 6.875 11.7266 7.28125 11.3516L10.5625 8.03906H1C0.4375 8.03906 0 7.60156 0 7.03906C0 6.50781 0.4375 6.03906 1 6.03906H10.5625L7.28125 2.75781C6.875 2.38281 6.875 1.72656 7.28125 1.35156C7.65625 0.945312 8.3125 0.945312 8.6875 1.35156L13.6875 6.35156C14.0938 6.72656 14.0938 7.38281 13.6875 7.75781Z"
+                fill="none"
+              />
+            </svg>
           </button>
         </div>
       </section>
@@ -385,7 +419,21 @@
 
             <div class="about__contact l-flex u-flex-col">
               <button class="about__btn btn btn--primary">
-                Learn more <i aria-hidden="true">🡪</i>
+                Learn more
+                <svg
+                  class="btn__arrow btn__arrow--light"
+                  aria-hidden="true"
+                  width="15"
+                  height="14"
+                  viewBox="0 0 15 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.6875 7.75781L8.6875 12.7578C8.5 12.9453 8.25 13.0391 8 13.0391C7.71875 13.0391 7.46875 12.9453 7.28125 12.7578C6.875 12.3828 6.875 11.7266 7.28125 11.3516L10.5625 8.03906H1C0.4375 8.03906 0 7.60156 0 7.03906C0 6.50781 0.4375 6.03906 1 6.03906H10.5625L7.28125 2.75781C6.875 2.38281 6.875 1.72656 7.28125 1.35156C7.65625 0.945312 8.3125 0.945312 8.6875 1.35156L13.6875 6.35156C14.0938 6.72656 14.0938 7.38281 13.6875 7.75781Z"
+                    fill="none"
+                  />
+                </svg>
               </button>
               <div class="l-flex u-flex-ac about__phone">
                 <img
@@ -591,7 +639,20 @@
                   </p>
                   <button class="btn btn--primary">
                     Apply Now
-                    <i aria-hidden="true">🡪</i>
+                    <svg
+                      class="btn__arrow btn__arrow--light"
+                      aria-hidden="true"
+                      width="15"
+                      height="14"
+                      viewBox="0 0 15 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.6875 7.75781L8.6875 12.7578C8.5 12.9453 8.25 13.0391 8 13.0391C7.71875 13.0391 7.46875 12.9453 7.28125 12.7578C6.875 12.3828 6.875 11.7266 7.28125 11.3516L10.5625 8.03906H1C0.4375 8.03906 0 7.60156 0 7.03906C0 6.50781 0.4375 6.03906 1 6.03906H10.5625L7.28125 2.75781C6.875 2.38281 6.875 1.72656 7.28125 1.35156C7.65625 0.945312 8.3125 0.945312 8.6875 1.35156L13.6875 6.35156C14.0938 6.72656 14.0938 7.38281 13.6875 7.75781Z"
+                        fill="none"
+                      />
+                    </svg>
                   </button>
                 </div>
               </div>
@@ -734,7 +795,19 @@
                 </p>
                 <div class="visa__footer l-flex u-flex-jc-between u-flex-ac">
                   <button class="btn btn-icon-only btn--primary btn--round">
-                    <i class="btn__arrow" aria-hidden="true">🡥</i>
+                    <svg
+                      class="btn__arrow btn__arrow--light"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.1581 7.00082V15.8397C18.1581 16.1711 18.02 16.4749 17.799 16.6959C17.5504 16.9445 17.2466 17.0826 16.9151 17.0826C16.2246 17.1102 15.6445 16.5302 15.6721 15.8397L15.6445 10.0115L7.19239 18.4637C6.6952 18.9609 5.92181 18.9609 5.42462 18.4637C4.95506 17.9941 4.92744 17.1931 5.42462 16.6959L13.8768 8.24378H8.07627C7.38574 8.2714 6.80569 7.69135 6.83331 7.00082C6.80569 6.31029 7.38574 5.73024 8.07627 5.75786H16.9151C17.6056 5.73024 18.1857 6.31029 18.1581 7.00082Z"
+                        fill="#83CD20"
+                      />
+                    </svg>
                   </button>
                   <img
                     src="./assets/images/student-visa-icon.svg"
@@ -763,7 +836,19 @@
                 </p>
                 <div class="visa__footer l-flex u-flex-jc-between u-flex-ac">
                   <button class="btn btn-icon-only btn--primary btn--round">
-                    <i class="btn__arrow" aria-hidden="true">🡥</i>
+                    <svg
+                      class="btn__arrow btn__arrow--light"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.1581 7.00082V15.8397C18.1581 16.1711 18.02 16.4749 17.799 16.6959C17.5504 16.9445 17.2466 17.0826 16.9151 17.0826C16.2246 17.1102 15.6445 16.5302 15.6721 15.8397L15.6445 10.0115L7.19239 18.4637C6.6952 18.9609 5.92181 18.9609 5.42462 18.4637C4.95506 17.9941 4.92744 17.1931 5.42462 16.6959L13.8768 8.24378H8.07627C7.38574 8.2714 6.80569 7.69135 6.83331 7.00082C6.80569 6.31029 7.38574 5.73024 8.07627 5.75786H16.9151C17.6056 5.73024 18.1857 6.31029 18.1581 7.00082Z"
+                        fill="#83CD20"
+                      />
+                    </svg>
                   </button>
                   <img
                     src="./assets/images/working-visa-icon.svg"
@@ -792,7 +877,19 @@
                 </p>
                 <div class="visa__footer l-flex u-flex-jc-between u-flex-ac">
                   <button class="btn btn-icon-only btn--primary btn--round">
-                    <i class="btn__arrow" aria-hidden="true">🡥</i>
+                    <svg
+                      class="btn__arrow btn__arrow--light"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.1581 7.00082V15.8397C18.1581 16.1711 18.02 16.4749 17.799 16.6959C17.5504 16.9445 17.2466 17.0826 16.9151 17.0826C16.2246 17.1102 15.6445 16.5302 15.6721 15.8397L15.6445 10.0115L7.19239 18.4637C6.6952 18.9609 5.92181 18.9609 5.42462 18.4637C4.95506 17.9941 4.92744 17.1931 5.42462 16.6959L13.8768 8.24378H8.07627C7.38574 8.2714 6.80569 7.69135 6.83331 7.00082C6.80569 6.31029 7.38574 5.73024 8.07627 5.75786H16.9151C17.6056 5.73024 18.1857 6.31029 18.1581 7.00082Z"
+                        fill="#83CD20"
+                      />
+                    </svg>
                   </button>
                   <img
                     src="./assets/images/student-visa-icon.svg"
@@ -821,7 +918,19 @@
                 </p>
                 <div class="visa__footer l-flex u-flex-jc-between u-flex-ac">
                   <button class="btn btn-icon-only btn--primary btn--round">
-                    <i class="btn__arrow" aria-hidden="true">🡥</i>
+                    <svg
+                      class="btn__arrow btn__arrow--light"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18.1581 7.00082V15.8397C18.1581 16.1711 18.02 16.4749 17.799 16.6959C17.5504 16.9445 17.2466 17.0826 16.9151 17.0826C16.2246 17.1102 15.6445 16.5302 15.6721 15.8397L15.6445 10.0115L7.19239 18.4637C6.6952 18.9609 5.92181 18.9609 5.42462 18.4637C4.95506 17.9941 4.92744 17.1931 5.42462 16.6959L13.8768 8.24378H8.07627C7.38574 8.2714 6.80569 7.69135 6.83331 7.00082C6.80569 6.31029 7.38574 5.73024 8.07627 5.75786H16.9151C17.6056 5.73024 18.1857 6.31029 18.1581 7.00082Z"
+                        fill="#83CD20"
+                      />
+                    </svg>
                   </button>
                   <img
                     src="./assets/images/tourist-visa-icon.svg"
@@ -1129,7 +1238,7 @@
       <div class="l-container l-grid footer__wrapper u-wrapper">
         <div class="footer__company">
           <img
-            src="./assets/images/footer-logo.png"
+            src="../assets/images/footer-logo.png"
             alt="Routex Home"
             class="footer__logo"
             width="157"
@@ -1142,7 +1251,7 @@
           <nav class="footer__social l-flex u-flex-ac" aria-label="Social">
             <a href="#" class="footer__social__links">
               <img
-                src="./assets/images/facebook.svg"
+                src="../assets/images/facebook.svg"
                 alt="Routex Facebook Home"
                 class="footer__brands"
                 width="20"
@@ -1151,7 +1260,7 @@
             </a>
             <a href="#" class="footer__social__links">
               <img
-                src="./assets/images/instagram.svg"
+                src="../assets/images/instagram.svg"
                 alt="Routex Instagram Home"
                 class="footer__brands"
                 width="20"
@@ -1160,7 +1269,7 @@
             </a>
             <a href="#" class="footer__social__links">
               <img
-                src="./assets/images/x.svg"
+                src="../assets/images/x.svg"
                 alt="Routex X Home"
                 class="footer__brands"
                 width="20"
@@ -1169,7 +1278,7 @@
             </a>
             <a href="#" class="footer__social__links">
               <img
-                src="./assets/images/linkedin.svg"
+                src="../assets/images/linkedin.svg"
                 alt="Routex Linkedin Home"
                 class="footer__brands"
                 width="20"
@@ -1188,7 +1297,7 @@
               <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
-                    src="./assets/images/check-mark.svg"
+                    src="../assets/images/check-mark.svg"
                     alt=""
                     class="footer__icon"
                     width="10"
@@ -1201,7 +1310,7 @@
               <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
-                    src="./assets/images/check-mark.svg"
+                    src="../assets/images/check-mark.svg"
                     alt=""
                     class="footer__icon"
                     width="10"
@@ -1214,7 +1323,7 @@
               <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
-                    src="./assets/images/check-mark.svg"
+                    src="../assets/images/check-mark.svg"
                     alt=""
                     class="footer__icon"
                     width="10"
@@ -1227,7 +1336,7 @@
               <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
-                    src="./assets/images/check-mark.svg"
+                    src="../assets/images/check-mark.svg"
                     alt=""
                     class="footer__icon"
                     width="10"
@@ -1249,7 +1358,7 @@
               <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
-                    src="./assets/images/check-mark.svg"
+                    src="../assets/images/check-mark.svg"
                     alt=""
                     class="footer__icon"
                     width="10"
@@ -1262,7 +1371,7 @@
               <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
-                    src="./assets/images/check-mark.svg"
+                    src="../assets/images/check-mark.svg"
                     alt=""
                     class="footer__icon"
                     width="10"
@@ -1275,7 +1384,7 @@
               <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
-                    src="./assets/images/check-mark.svg"
+                    src="../assets/images/check-mark.svg"
                     alt=""
                     class="footer__icon"
                     width="10"
@@ -1288,7 +1397,7 @@
               <li class="footer__item">
                 <a class="footer__link l-flex u-flex-ac" href="#">
                   <img
-                    src="./assets/images/check-mark.svg"
+                    src="../assets/images/check-mark.svg"
                     alt=""
                     class="footer__icon"
                     width="10"
@@ -1308,13 +1417,12 @@
           <p class="footer__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
-          <form class="form footer__form">
-            <div class="form__group">
+          <form class="form footer-form">
+            <div class="form__group footer-form__group">
               <input
                 type="email"
-                class="form__input"
+                class="form__input footer__input"
                 placeholder="Enter your email"
-                S
               />
               <button
                 class="form__group__btn btn btn-icon-only btn--round btn--primary"

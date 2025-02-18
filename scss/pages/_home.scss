@@ -4,25 +4,12 @@
 
 // Hero
 .hero {
-    background-color: $color-secondary-900;
-    margin-block-end: $space-x16;
+    padding-block-end: $space-x16;
     overflow: hidden;
     position: relative;
 
-    background-image: url('../assets/images/hero-main-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
-
     @include breakpoint('tablet-landscape') {
-        background-size: 100%;
-        background-position: bottom;
-    }
-
-    @include breakpoint('large') {
-        border-radius: 5rem;
-        margin-inline: auto;
-        width: min(calc(100% - 8rem), 1400px);
+        padding-block-end: $space-x30;
     }
 
     &__wrapper {

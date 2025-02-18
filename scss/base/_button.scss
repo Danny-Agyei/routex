@@ -21,6 +21,12 @@
 
   &__arrow {
     font-size: 1.4rem;
+    width: 1.4rem;
+    height: 1.4rem;
+
+    &--light {
+      fill: $color-neutral-100;
+    }
   }
 
   svg {
@@ -48,6 +54,10 @@
 
     &:hover {
       background-color: $color-primary-900;
+
+      .btn__arrow {
+        fill: $color-neutral-100
+      }
     }
   }
 
@@ -68,6 +78,7 @@
     &:hover {
       background-color: $color-primary-900;
       color: $color-neutral-100;
+
     }
   }
 

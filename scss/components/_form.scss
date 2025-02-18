@@ -2,40 +2,56 @@
 @use '../base/color' as *;
 
 .form {
-    &__input {
-        border: none;
-        height: 100%;
-        outline: none;
-        width: 100%;
-        color: $color-neutral-100;
-
-        &::placeholder {
-            color: $color-neutral-100;
-        }
-    }
 
     &__group {
+        margin-block-start: $space-x4;
+    }
+
+    &__label {
+        display: block;
+        margin-block-end: 0.5rem;
+    }
+
+    &__control {
         position: relative;
-        height: 5rem;
-        background-color: $color-neutral-900;
-        border-radius: $radius-full;
-        padding-inline-start: $space-x4;
+        height: 4.5rem;
+        width: 100%;
+        overflow: hidden;
+        border-radius: $radius-sm;
+        background-color: $color-neutral-100;
 
-        &__btn {
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 5rem;
-            width: 5rem;
-
-            &:hover {
-                background-color: $color-primary-500;
-                opacity: 0.9;
-            }
-
-            svg {
-                fill: $color-neutral-100;
-            }
+        &--area {
+            height: auto;
+            padding-block: $space-x4;
         }
     }
+
+    &__input {
+        border: none;
+        color: $color-neutral-900;
+        height: 100%;
+        outline: none;
+        padding-inline: $space-x4;
+        width: 100%;
+
+        &::placeholder {
+            color: $color-neutral-500;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: $space-x4;
+        transform: translateY(-50%);
+
+        &--message {
+            top: $space-x5;
+        }
+    }
+
+    &__btn {
+        margin-block-start: $space-x5;
+    }
+
 }

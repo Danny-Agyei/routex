@@ -1,0 +1,34 @@
+@use '../base/color' as *;
+@use '../base/variable' as *;
+@use '../abstracts/mixin' as *;
+
+.banner {
+    margin-block-end: $space-x16;
+
+    @include breakpoint('tablet-landscape') {
+        margin-block-end: $space-x20;
+    }
+
+    &__headline {
+        color: $color-neutral-100;
+        margin-block-end: $space-x4;
+        text-align: center;
+
+        @media screen and (max-width:37.5em) {
+            font-size: 4rem;
+        }
+    }
+
+    &__breadcrumb {
+        gap: $space-x3;
+        color: $color-neutral-100;
+    }
+
+    &__location {
+        opacity: 0.8;
+    }
+
+    &__icon {
+        fill: $color-neutral-100;
+    }
+}

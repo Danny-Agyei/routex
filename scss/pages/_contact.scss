@@ -1,0 +1,36 @@
+@use '../base/variable' as *;
+@use '../base/color' as *;
+@use "../abstracts/mixin" as *;
+
+.contact {
+    max-width: 74rem;
+    margin-inline: auto;
+
+    &-banner {
+        margin-block-end: 0;
+    }
+
+    &__description {
+        margin-block: $space-x6 $space-x8;
+    }
+
+    &__form {
+        background-color: $color-primary-200;
+        padding: $space-x5;
+
+        @include breakpoint('tablet') {
+            padding: $space-x10;
+        }
+    }
+
+    &__btn {
+        background-color: $color-primary-900;
+        transition: opacity 0.3s ease;
+        width: 100%;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+}
