@@ -19,7 +19,6 @@
         row-gap: 0;
         z-index: 5;
 
-
         @include breakpoint('desktop') {
             min-height: 65rem;
         }
