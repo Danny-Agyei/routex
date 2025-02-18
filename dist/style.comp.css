@@ -921,12 +921,12 @@ h2 {
 
 .services__header {
   margin-block-end: 4rem;
-  max-width: 30rem;
+  max-width: 35rem;
   text-align: center;
 }
 @media screen and (min-width: 48em) {
   .services__header {
-    max-width: 45rem;
+    max-width: 55rem;
   }
 }
 .services__list {

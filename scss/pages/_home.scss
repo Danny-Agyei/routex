@@ -96,21 +96,12 @@
         display: flex;
         grid-column: 1 / -1;
 
-        // @include breakpoint('tablet') {
-        //     background-size: 50rem;
-        // }
-
         @include breakpoint('tablet-landscape') {
             background-size: contain;
             grid-column: 7 / -1;
             grid-row: 1;
             height: 100%;
         }
-
-
-        // @include breakpoint('desktop') {
-        //     align-self: end;
-        // }
 
     }
 
@@ -121,7 +112,6 @@
         width: 100%;
 
         @include breakpoint('tablet-landscape') {
-            // max-width: 100%;
             width: 68rem;
             height: 100%;
         }
@@ -134,11 +124,11 @@
 
     &__header {
         margin-block-end: $space-x10;
-        max-width: 30rem;
+        max-width: 35rem;
         text-align: center;
 
         @include breakpoint('tablet') {
-            max-width: 45rem;
+            max-width: 55rem;
         }
     }
 
